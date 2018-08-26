@@ -383,5 +383,12 @@
  "y": 1570,
  "width": 90,
  "height": 90
+ },
+ "barco": {
+ "name": "barcaodomarcao.png",
+ "x": 1773,
+ "y": 3880,
+ "width": 87,
+ "height": 126
  }
 }
