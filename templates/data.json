@@ -397,5 +397,12 @@
  "y": 2731,
  "width": 177,
  "height": 208
+ },
+ "dog": {
+ "name": "dogao.png",
+ "x": 2932,
+ "y": 2939,
+ "width": 90,
+ "height": 70
  }
 }
