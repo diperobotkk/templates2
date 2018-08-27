@@ -328,9 +328,9 @@
  "width": 186,
  "height": 166
 },
- "cbfcanarinho": {
- "name": "cbfcanarinho.png",
- "x": 3885,
+ "cbf2": {
+ "name": "cbf2.png",
+ "x": 3884,
  "y": 2885,
  "width": 208,
  "height": 215
@@ -401,7 +401,7 @@
  "dog": {
  "name": "dogao.png",
  "x": 2932,
- "y": 2939,
+ "y": 2940,
  "width": 90,
  "height": 70
  }
