@@ -404,5 +404,12 @@
  "y": 2940,
  "width": 90,
  "height": 70
+ },
+ "cat": {
+ "name": "gatobr.png",
+ "x": 3071,
+ "y": 3000,
+ "width": 178,
+ "height": 88
  }
 }
