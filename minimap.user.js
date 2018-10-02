@@ -1,14 +1,14 @@
 // ==UserScript==
-// @name         ♛ 𝑩𝑹𝑨𝑺𝑰𝑳-𝒁𝑶𝑵𝑬 ♛ 𝑴𝑰𝑵𝑰𝑴𝑨𝑷𝑨 ♛
+// @name         🌎 World Map 🌎
 // @namespace    http://tampermonkey.net/
 // @version      1.0
-// @description  ♛ 𝑩𝑹𝑨𝑺𝑰𝑳-𝒁𝑶𝑵𝑬 ♛ 𝑴𝑰𝑵𝑰𝑴𝑨𝑷𝑨 ♛
-// @author       z0mb
+// @description  🌎 World Map 🌎
+// @author       z0mb #edited Asuma
 // @match        https://pixelzone.io/*
 // @match        http://pixelzone.io/*
 // @homepage     https://discord.io/brasil-zone
-// @updateURL    https://raw.githubusercontent.com/zZz0mb/BRASIL-ZONE-MINIMAPA/blob/master/minimap.user.js
-// @downloadURL  https://raw.githubusercontent.com/zZz0mb/BRASIL-ZONE-MINIMAPA/blob/master/minimap.user.js
+// @updateURL    https://raw.githubusercontent.com/AsumaGC/Minimapa/blob/master/minimap.user.js
+// @downloadURL  https://raw.githubusercontent.com/AsumaGC/Minimapa/blob/master/minimap.user.js
 // @grant        none
 // ==/UserScript==
 
@@ -18,7 +18,7 @@ Number.prototype.between = function(a, b) {
   return this > min && this < max;
 };
 
-window.baseTepmlateUrl = 'https://raw.githubusercontent.com/zZz0mb/BRASIL-ZONE-MINIMAPA/master';
+window.baseTepmlateUrl = 'https://raw.githubusercontent.com/AsumaGC/Minimapa/master';
 
 window.addEventListener('load', function () {
     //Regular Expression to get coordinates from cursor
@@ -50,7 +50,7 @@ window.addEventListener('load', function () {
     //Cachebreaker to force refresh
     cachebreaker = null;
 
-	vers = "♛ 𝑩𝑹𝑨𝑺𝑰𝑳-𝒁𝑶𝑵𝑬 ♛ 𝑴𝑰𝑵𝑰𝑴𝑨𝑷𝑨 ♛";
+	vers = "🌎 World Map 🌎";
 
     var div = document.createElement('div');
     div.setAttribute('class', 'post block bc2');
@@ -63,7 +63,7 @@ window.addEventListener('load', function () {
         '<canvas id="minimap-cursor" style="width: 100%; height: 100%;z-index:3;position:absolute;top:0;left:0;"></canvas>' +
         '</div><div id="minimap-config" style="line-height:20px;">' +
         '<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet"> <i class="em em-flag-br"></i> | <span id="hide-map" style="cursor:pointer;color:white">𝑴𝒊𝒏𝒊𝒎𝒊𝒛𝒂𝒓' +
-        '</span> | <span id="follow-mouse" style="cursor:pointer;">𝑺𝒆𝒈𝒖𝒊𝒓 𝒐 𝒎𝒐𝒖𝒔𝒆' +
+        '</span> | <span id="follow-mouse" style="cursor:pointer;">Seguir o Mouse' +
         '</span> | 𝒁𝒐𝒐𝒎: <span id="zoom-plus" style="cursor:pointer;font-weight:bold;">▲</span>' +
         '<span id="zoom-minus" style="cursor:pointer;font-weight:bold;">▼</span>' +
         ' | <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet"> <i class="em em-flag-br"></i><br />' + vers +
@@ -98,7 +98,7 @@ window.addEventListener('load', function () {
         document.getElementById("minimap-box").style.display = "none";
         document.getElementById("minimap-config").style.display = "none";
         document.getElementById("minimap-text").style.display = "block";
-        document.getElementById("minimap-text").innerHTML = "𝑬𝒙𝒑𝒂𝒏𝒅𝒊𝒓 𝒎𝒂𝒑𝒂";
+        document.getElementById("minimap-text").innerHTML = "Expandir Mapa";
         document.getElementById("minimap-text").style.cursor = "pointer";
     };
     document.getElementById("minimap-text").onclick = function () {
@@ -130,13 +130,13 @@ window.addEventListener('load', function () {
     document.getElementById("follow-mouse").onclick = function () {
         toggle_follow = !toggle_follow;
         if (toggle_follow) {
-            this.innerHTML = "𝑺𝒆𝒈𝒖𝒊𝒓 𝒂 𝒕𝒆𝒍𝒂";
+            this.innerHTML = "Seguir Tela";
             loadTemplates();
             x_window = x;
             y_window = y;
             drawCursor();
         } else {
-            this.innerHTML = "𝑺𝒆𝒈𝒖𝒊𝒓 𝒐 𝒎𝒐𝒖𝒔𝒆";
+            this.innerHTML = "Seguir Mouse";
             getCenter();
         }
     };
@@ -284,7 +284,7 @@ function loadTemplates() {
         if (zooming_in == false && zooming_out == false) {
             document.getElementById("minimap-box").style.display = "none";
             document.getElementById("minimap-text").style.display = "block";
-            document.getElementById("minimap-text").innerHTML = "𝑵𝒂̃𝒐 𝒉𝒂́ 𝒕𝒆𝒎𝒑𝒍𝒂𝒕𝒆𝒔 𝒂𝒒𝒖𝒊";
+            document.getElementById("minimap-text").innerHTML = "Sem templates aqui.";
         }
     } else {
         document.getElementById("minimap-box").style.display = "block";
