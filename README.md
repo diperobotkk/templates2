@@ -1,2 +1,2 @@
-# BRASIL-ZONE-MINIMAPA
-BRASIL-ZONE-MINIMAPA
+# World Map MiniMap
+World Map MiniMap
