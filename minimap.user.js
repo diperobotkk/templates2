@@ -64,7 +64,7 @@ window.addEventListener('load', function () {
         '</div><div id="minimap-config" style="line-height:20px;">' +
         '<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet"> <i class="em em-flag-br"></i> | <span id="hide-map" style="cursor:pointer;color:white">𝑴𝒊𝒏𝒊𝒎𝒊𝒛𝒂𝒓' +
         '</span> | <span id="follow-mouse" style="cursor:pointer;">Seguir o Mouse' +
-        '</span> | 𝒁𝒐𝒐𝒎: <span id="zoom-plus" style="cursor:pointer;font-weight:bold;">▲</span>' +
+        '</span> | Zoom: <span id="zoom-plus" style="cursor:pointer;font-weight:bold;">▲</span>' +
         '<span id="zoom-minus" style="cursor:pointer;font-weight:bold;">▼</span>' +
         ' | <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet"> <i class="em em-flag-br"></i><br />' + vers +
         '</div>' +
@@ -209,7 +209,7 @@ function toggleShow() {
         document.getElementById("minimap-box").style.display = "none";
         document.getElementById("minimap-config").style.display = "none";
         document.getElementById("minimap-text").style.display = "block";
-        document.getElementById("minimap-text").innerHTML = "𝑬𝒙𝒑𝒂𝒏𝒅𝒊𝒓 𝒎𝒂𝒑𝒂";
+        document.getElementById("minimap-text").innerHTML = "Expandir Mapa";
         document.getElementById("minimapbg").onclick = function () {
             toggleShow()
         };
