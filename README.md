@@ -1,2 +1,2 @@
-# World Map MiniMap
-World Map MiniMap
+# Christ Zone Minimap
+Christ Zone Minimap
