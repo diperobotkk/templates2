@@ -3,7 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @version      1.0
 // @description  🕇 𝓒𝓱𝓻𝓲𝓼𝓽 𝓩𝓸𝓷𝓮 🕇
-// @author       z0mb #edited Asuma
+// @author       ༺鿆Aѕυмα鿆༻
 // @match        https://pixelzone.io/*
 // @match        http://pixelzone.io/*
 // @homepage     https://discord.io/Christ-Zone
@@ -62,11 +62,10 @@ window.addEventListener('load', function () {
         '<canvas id="minimap-board" style="width: 100%; height: 100%;z-index:2;position:absolute;top:0;left:0;"></canvas>' +
         '<canvas id="minimap-cursor" style="width: 100%; height: 100%;z-index:3;position:absolute;top:0;left:0;"></canvas>' +
         '</div><div id="minimap-config" style="line-height:20px;">' +
-        '<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet"> <i class="em em-flag-br"></i> | <span id="hide-map" style="cursor:pointer;color:white">Minimize' +
+        '<span id="hide-map" style="cursor:pointer;color:white">Minimize' +
         '</span> | <span id="follow-mouse" style="cursor:pointer;">Follow Mouse' +
         '</span> | Zoom: <span id="zoom-plus" style="cursor:pointer;font-weight:bold;">▲</span>' +
-        '<span id="zoom-minus" style="cursor:pointer;font-weight:bold;">▼</span>' +
-        ' | <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet"> <i class="em em-flag-br"></i><br />' + vers +
+        '<span id="zoom-minus" style="cursor:pointer;font-weight:bold;">▼</span>' +' + vers +
         '</div>' +
         '</div>';
     document.body.appendChild(div);
