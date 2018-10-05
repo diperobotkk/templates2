@@ -6,11 +6,18 @@
     "width": 268,
     "height": 87
    },
-  "Bandeira": {
+  "BandeiraNazi": {
     "name": "template (1).png",
     "x": 2328,
     "y": -1238,
     "width": 345,
     "height": 244
+   },
+  "MiniNazi": {
+    "name": "mini.png",
+    "x": 2851,
+    "y": -1082,
+    "width": 128,
+    "height": 76
  }
 }
