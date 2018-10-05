@@ -65,7 +65,7 @@ window.addEventListener('load', function () {
         '<span id="hide-map" style="cursor:pointer;color:white">Minimize' +
         '</span> | <span id="follow-mouse" style="cursor:pointer;">Follow Mouse' +
         '</span> | Zoom: <span id="zoom-plus" style="cursor:pointer;font-weight:bold;">▲</span>' +
-        '<span id="zoom-minus" style="cursor:pointer;font-weight:bold;">▼</span>' +' + vers +
+        '<span id="zoom-minus" style="cursor:pointer;font-weight:bold;">▼</span>' +' 
         '</div>' +
         '</div>';
     document.body.appendChild(div);
