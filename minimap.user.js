@@ -1,12 +1,12 @@
 // ==UserScript==
-// @name         🕇 𝓒𝓱𝓻𝓲𝓼𝓽 𝓩𝓸𝓷𝓮 🕇
+// @name         卐 𝐍𝐚𝐳𝐢 𝐙𝐨𝐧𝐞 卐
 // @namespace    http://tampermonkey.net/
 // @version      1.0
-// @description  🕇 𝓒𝓱𝓻𝓲𝓼𝓽 𝓩𝓸𝓷𝓮 🕇
+// @description  卐 𝐍𝐚𝐳𝐢 𝐙𝐨𝐧𝐞 卐
 // @author       ༺鿆Aѕυмα鿆༻
 // @match        https://pixelzone.io/*
 // @match        http://pixelzone.io/*
-// @homepage     https://discord.io/Christ-Zone
+// @homepage     https://discord.io/Nazi-Zone
 // @updateURL    https://raw.githubusercontent.com/AsumaGC/Minimapa/blob/master/minimap.user.js
 // @downloadURL  https://raw.githubusercontent.com/AsumaGC/Minimapa/blob/master/minimap.user.js
 // @grant        none
@@ -50,20 +50,20 @@ window.addEventListener('load', function () {
     //Cachebreaker to force refresh
     cachebreaker = null;
 
-	vers = "🕇 𝓒𝓱𝓻𝓲𝓼𝓽 𝓩𝓸𝓷𝓮 🕇";
+	vers = "卐 𝐍𝐚𝐳𝐢 𝐙𝐨𝐧𝐞 卐";
 
     var div = document.createElement('div');
     div.setAttribute('class', 'post block bc2');
     div.innerHTML = '<div id="minimapbg" style="position: absolute; right: 0.6em; bottom: 0.6em; z-index: 2;">' +
-        '<div class="posy" id="posyt" style="background-size: 100%; background-image: url(https://i.imgur.com/8Gak8ag.jpg); color: rgb(255, 255, 255); text-align: center; line-height: 42px; vertical-align: middle; width: auto; height: auto; border-radius: 12px; padding: 10px;">' +
+        '<div class="posy" id="posyt" style="background-size: 100%; background-image: url(https://i.imgur.com/dDGMbMT.png); color: rgb(255, 255, 255); text-align: center; line-height: 42px; vertical-align: middle; width: auto; height: auto; border-radius: 12px; padding: 10px;">' +
         '<div id="minimap-text" style="display: none;"></div>' +
         '<div id="minimap-box" style="position: relative;width:400px;height:300px">' +
         '<canvas id="minimap" style="width: 100%; height: 100%;z-index:1;position:absolute;top:0;left:0;"></canvas>' +
         '<canvas id="minimap-board" style="width: 100%; height: 100%;z-index:2;position:absolute;top:0;left:0;"></canvas>' +
         '<canvas id="minimap-cursor" style="width: 100%; height: 100%;z-index:3;position:absolute;top:0;left:0;"></canvas>' +
         '</div><div id="minimap-config" style="line-height:20px;">' +
-        '<span id="hide-map" style="cursor:pointer;color:white">Minimize' +
-        '</span> | <span id="follow-mouse" style="cursor:pointer;">Follow Mouse' +
+        '<span id="hide-map" style="cursor:pointer;color:white">Minimieren' +
+        '</span> | <span id="follow-mouse" style="cursor:pointer;">Folge der Maus' +
         '</span> | Zoom: <span id="zoom-plus" style="cursor:pointer;font-weight:bold;">▲</span>' +
         '<span id="zoom-minus" style="cursor:pointer;font-weight:bold;">▼</span>'
         '</div>' +
@@ -97,7 +97,7 @@ window.addEventListener('load', function () {
         document.getElementById("minimap-box").style.display = "none";
         document.getElementById("minimap-config").style.display = "none";
         document.getElementById("minimap-text").style.display = "block";
-        document.getElementById("minimap-text").innerHTML = "Expand Map";
+        document.getElementById("minimap-text").innerHTML = "Karte erweitern";
         document.getElementById("minimap-text").style.cursor = "pointer";
     };
     document.getElementById("minimap-text").onclick = function () {
@@ -129,13 +129,13 @@ window.addEventListener('load', function () {
     document.getElementById("follow-mouse").onclick = function () {
         toggle_follow = !toggle_follow;
         if (toggle_follow) {
-            this.innerHTML = "Follow";
+            this.innerHTML = "Zu folgen";
             loadTemplates();
             x_window = x;
             y_window = y;
             drawCursor();
         } else {
-            this.innerHTML = "Follow Mouse";
+            this.innerHTML = "Folge der Maus";
             getCenter();
         }
     };
@@ -208,7 +208,7 @@ function toggleShow() {
         document.getElementById("minimap-box").style.display = "none";
         document.getElementById("minimap-config").style.display = "none";
         document.getElementById("minimap-text").style.display = "block";
-        document.getElementById("minimap-text").innerHTML = "Expand Map";
+        document.getElementById("minimap-text").innerHTML = "Karte erweitern";
         document.getElementById("minimapbg").onclick = function () {
             toggleShow()
         };
@@ -283,7 +283,7 @@ function loadTemplates() {
         if (zooming_in == false && zooming_out == false) {
             document.getElementById("minimap-box").style.display = "none";
             document.getElementById("minimap-text").style.display = "block";
-            document.getElementById("minimap-text").innerHTML = "No templates here.";
+            document.getElementById("minimap-text").innerHTML = "Keine Vorlagen hier.";
         }
     } else {
         document.getElementById("minimap-box").style.display = "block";
