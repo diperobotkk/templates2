@@ -1,2 +1,2 @@
-# Christ Zone Minimap
-Christ Zone Minimap
+# Nazi Zone Mini Map
+Nazi Zone Mini Map
