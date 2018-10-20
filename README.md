@@ -1,2 +1,2 @@
-# Nazi Zone Mini Map
-Nazi Zone Mini Map
+# Orange Plague Mini Mapa
+Orange Plague Mini mapa feito por Asuma!
