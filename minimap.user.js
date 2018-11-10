@@ -6,7 +6,7 @@
 // @author       ༺鿆Aѕυмα鿆༻
 // @match        https://pixelzone.io/*
 // @match        http://pixelzone.io/*
-// @homepage     https://discord.io/Nazi-Zone
+// @homepage     https://discord.io/Brasil-Zone
 // @updateURL    https://raw.githubusercontent.com/AsumaGC/Brasil-Map/blob/master/minimap.user.js
 // @downloadURL  https://raw.githubusercontent.com/AsumaGC/Brasil-Map/blob/master/minimap.user.js
 // @grant        none
@@ -143,7 +143,7 @@ window.addEventListener('load', function () {
         }
     };
 
-    gameWindow = document.getElementById("layer1");
+    gameWindow = document.getElementById("canvas");
     gameWindow.addEventListener('mouseup', function (evt) {
         if (!toggle_show)
             return;
