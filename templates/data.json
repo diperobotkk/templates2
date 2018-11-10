@@ -6,11 +6,11 @@
    "width": 846,
    "height": 95
    },
-  "MiniNazi": {
-    "name": "mini.png",
-    "x": 2851,
-    "y": -1082,
-    "width": 128,
-    "height": 76
+  "brnovo": {
+   "name": "brnovo.png",
+   "x": 2153,
+   "y": 3105,
+   "width": 1943,
+   "height": 991
  }
 }
