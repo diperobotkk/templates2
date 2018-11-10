@@ -1,14 +1,14 @@
 // ==UserScript==
-// @name         卐 𝐍𝐚𝐳𝐢 𝐙𝐨𝐧𝐞 卐
+// @name         вrαsiℓ ʑσทє Mini map
 // @namespace    http://tampermonkey.net/
 // @version      1.0
-// @description  卐 𝐍𝐚𝐳𝐢 𝐙𝐨𝐧𝐞 卐
+// @description  вrαsiℓ ʑσทє
 // @author       ༺鿆Aѕυмα鿆༻
 // @match        https://pixelzone.io/*
 // @match        http://pixelzone.io/*
 // @homepage     https://discord.io/Nazi-Zone
-// @updateURL    https://raw.githubusercontent.com/AsumaGC/Minimapa/blob/master/minimap.user.js
-// @downloadURL  https://raw.githubusercontent.com/AsumaGC/Minimapa/blob/master/minimap.user.js
+// @updateURL    https://raw.githubusercontent.com/AsumaGC/Brasil-Map/blob/master/minimap.user.js
+// @downloadURL  https://raw.githubusercontent.com/AsumaGC/Brasil-Map/blob/master/minimap.user.js
 // @grant        none
 // ==/UserScript==
 
@@ -17,13 +17,15 @@ Number.prototype.between = function(a, b) {
     max = Math.max.apply(Math, [a, b]);
   return this > min && this < max;
 };
-
-window.baseTepmlateUrl = 'https://raw.githubusercontent.com/AsumaGC/Minimapa/master';
+var range = 25;
+window.baseTepmlateUrl = 'https://raw.githubusercontent.com/AsumaGC/brasl-Map/master/';
 
 window.addEventListener('load', function () {
+    //Regular Expression to get coordinates out of URL
+    re = /(.*)\/\?p=(\-?(?:\d*)),(\-?(?:\d*))/g;
     //Regular Expression to get coordinates from cursor
-    rec = /x\:(-?\d*) y\:(-?\d*)/g;
-    gameWindow = document.getElementById("gameWindow");
+    rec = /x\:(\d*) y\:(\d*)/g;
+    gameWindow = document.getElementById("canvas");
     //DOM element of the displayed X, Y variables
     coorDOM = null;
     findCoor();
@@ -49,22 +51,22 @@ window.addEventListener('load', function () {
     needed_templates = null;
     //Cachebreaker to force refresh
     cachebreaker = null;
-
-	vers = "卐 𝐍𝐚𝐳𝐢 𝐙𝐨𝐧𝐞 卐";
+	
+    vers = "вrαsiℓ ʑσทє";
 
     var div = document.createElement('div');
     div.setAttribute('class', 'post block bc2');
     div.innerHTML = '<div id="minimapbg" style="position: absolute; right: 0.6em; bottom: 0.6em; z-index: 2;">' +
-        '<div class="posy" id="posyt" style="background-size: 100%; background-image: url(https://i.imgur.com/dDGMbMT.png); color: rgb(255, 255, 255); text-align: center; line-height: 42px; vertical-align: middle; width: auto; height: auto; border-radius: 12px; padding: 10px;">' +
+        '<div class="posy" id="posyt" style="background-size: 100%; background-image: url(https://i.imgur.com/2qu5Wch.png); color: rgb(255, 255, 255); text-align: center; line-height: 42px; vertical-align: middle; width: auto; height: auto; border-radius: 12px; padding: 10px;">' +
         '<div id="minimap-text" style="display: none;"></div>' +
         '<div id="minimap-box" style="position: relative;width:400px;height:300px">' +
         '<canvas id="minimap" style="width: 100%; height: 100%;z-index:1;position:absolute;top:0;left:0;"></canvas>' +
         '<canvas id="minimap-board" style="width: 100%; height: 100%;z-index:2;position:absolute;top:0;left:0;"></canvas>' +
         '<canvas id="minimap-cursor" style="width: 100%; height: 100%;z-index:3;position:absolute;top:0;left:0;"></canvas>' +
         '</div><div id="minimap-config" style="line-height:20px;">' +
-        '<span id="hide-map" style="cursor:pointer;color:white">Minimieren' +
-        '</span> | <span id="follow-mouse" style="cursor:pointer;">Folge der Maus' +
-        '</span> | Zoom: <span id="zoom-plus" style="cursor:pointer;font-weight:bold;">▲</span>' +
+        '<span id="hide-map" style="cursor:pointer;color:white">𝑴𝒊𝒏𝒊𝒎𝒊𝒛𝒂𝒓' +
+        '</span> | <span id="follow-mouse" style="cursor:pointer;">𝑺𝒆𝒈𝒖𝒊𝒓 𝒐 𝒎𝒐𝒖𝒔𝒆'' +
+        '</span> | 𝒁𝒐𝒐𝒎: <span id="zoom-plus" style="cursor:pointer;font-weight:bold;">▲</span>' +
         '<span id="zoom-minus" style="cursor:pointer;font-weight:bold;">▼</span>'
         '</div>' +
         '</div>';
@@ -97,7 +99,7 @@ window.addEventListener('load', function () {
         document.getElementById("minimap-box").style.display = "none";
         document.getElementById("minimap-config").style.display = "none";
         document.getElementById("minimap-text").style.display = "block";
-        document.getElementById("minimap-text").innerHTML = "Karte erweitern";
+        document.getElementById("minimap-text").innerHTML = "𝑬𝒙𝒑𝒂𝒏𝒅𝒊𝒓 𝒎𝒂𝒑𝒂";
         document.getElementById("minimap-text").style.cursor = "pointer";
     };
     document.getElementById("minimap-text").onclick = function () {
