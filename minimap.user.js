@@ -18,7 +18,7 @@ Number.prototype.between = function(a, b) {
   return this > min && this < max;
 };
 var range = 25;
-window.baseTepmlateUrl = 'https://raw.githubusercontent.com/AsumaGC/voidmap/master/';
+window.baseTepmlateUrl = 'https://raw.githubusercontent.com/AsumaGC/Brasil-Map/master/';
 
 window.addEventListener('load', function () {
     //Regular Expression to get coordinates out of URL
@@ -132,13 +132,13 @@ window.addEventListener('load', function () {
     document.getElementById("follow-mouse").onclick = function () {
         toggle_follow = !toggle_follow;
         if (toggle_follow) {
-            this.innerHTML = "Zu folgen";
+            this.innerHTML = "𝑺𝒆𝒈𝒖𝒊𝒓 𝒂 𝒕𝒆𝒍𝒂";
             loadTemplates();
             x_window = x;
             y_window = y;
             drawCursor();
         } else {
-            this.innerHTML = "Folge der Maus";
+            this.innerHTML = "𝑺𝒆𝒈𝒖𝒊𝒓 𝒐 𝒎𝒐𝒖𝒔𝒆";
             getCenter();
         }
     };
@@ -286,7 +286,7 @@ function loadTemplates() {
         if (zooming_in == false && zooming_out == false) {
             document.getElementById("minimap-box").style.display = "none";
             document.getElementById("minimap-text").style.display = "block";
-            document.getElementById("minimap-text").innerHTML = "Keine Vorlagen hier.";
+            document.getElementById("minimap-text").innerHTML = "𝑵𝒂̃𝒐 𝒉𝒂́ 𝒕𝒆𝒎𝒑𝒍𝒂𝒕𝒆𝒔 𝒂𝒒𝒖𝒊";
         }
     } else {
         document.getElementById("minimap-box").style.display = "block";
