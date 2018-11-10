@@ -1,16 +1,93 @@
 {
-  "discord": {
-   "name": "discord.png",
-   "x": 2702,
-   "y": 3010,
-   "width": 846,
-   "height": 95
-   },
-   "brnovo": {
-   "name": "brnovo.png",
-   "x": 2153,
-   "y": 3105,
-   "width": 1943,
-   "height": 991
+"brnovo": {
+ "name": "brnovo.png",
+ "x": 2153,
+ "y": 3105,
+ "width": 1943,
+ "height": 991
+},
+"madruga": {
+ "name": "madruga.png",
+ "x": 2262,
+ "y": 3066,
+ "width": 59,
+ "height": 39
+},
+ "estadoss": {
+ "name": "estadoss.png",
+ "x": 2130,
+ "y": 2979,
+ "width": 400,
+ "height": 83
+},
+ "cima": {
+ "name": "cima.png",
+ "x": 2468,
+ "y": 3016,
+ "width": 154,
+ "height": 89
+},
+ "countryball": {
+ "name": "countryball.png",
+ "x": 2171,
+ "y": 2687,
+ "width": 263,
+ "height": 252
+},
+ "kuruminha": {
+ "name": "kuruminhaa.png",
+ "x": 2434,
+ "y": 2733,
+ "width": 144,
+ "height": 206
+},
+ "discord": {
+ "name": "discord.png",
+ "x": 2702,
+ "y": 3010,
+ "width": 846,
+ "height": 95
+},
+ "dollynho": {
+ "name": "Dollynho.png",
+ "x": 2578,
+ "y": 2731,
+ "width": 177,
+ "height": 208
+},
+ "huedentor": {
+ "name": "huedentor.png",
+ "x": 3407,
+ "y": 2710,
+ "width": 379,
+ "height": 395
+},
+ "brasao": {
+ "name": "brasao.png",
+ "x": 3702,
+ "y": 2935,
+ "width": 186,
+ "height": 166
+},
+ "cbf2": {
+ "name": "cbf2.png",
+ "x": 3884,
+ "y": 2885,
+ "width": 208,
+ "height": 215
+},
+ "voidzilbrasao": {
+ "name": "voidzilbrasao.png",
+ "x": 688,
+ "y": 2285,
+ "width": 139,
+ "height": 198
+},
+ "obs": {
+ "name": "obs.png",
+ "x": 1848,
+ "y": 3084,
+ "width": 301,
+ "height": 557
  }
 }
