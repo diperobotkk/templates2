@@ -1,2 +1,2 @@
-# Orange Plague Mini Mapa
-Orange Plague Mini mapa feito por Asuma!
+# вrαsiℓ ʑσทє Mini Map
+вrαsiℓ ʑσทє Mini Map feito por Asuma!
