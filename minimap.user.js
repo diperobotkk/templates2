@@ -1,14 +1,14 @@
 // ==UserScript==
-// @name         вrαsiℓ ʑσทє Mini map
+// @name         𝓟𝓸𝓻𝓽𝓾𝓰𝓪𝓵 𝓩𝓸𝓷𝓮 Mini map
 // @namespace    http://tampermonkey.net/
 // @version      1.0
-// @description  вrαsiℓ ʑσทє
+// @description  𝓟𝓸𝓻𝓽𝓾𝓰𝓪𝓵 𝓩𝓸𝓷𝓮
 // @author       ༺鿆Aѕυмα鿆༻
 // @match        https://pixelzone.io/*
 // @match        http://pixelzone.io/*
-// @homepage     https://discord.io/Brasil-Zone
-// @updateURL    https://raw.githubusercontent.com/AsumaGC/Brasil-Map/blob/master/minimap.user.js
-// @downloadURL  https://raw.githubusercontent.com/AsumaGC/Brasil-Map/blob/master/minimap.user.js
+// @homepage     https://discord.io/Pt-zone
+// @updateURL    https://raw.githubusercontent.com/AsumaGC/PortugalMap/blob/master/minimap.user.js
+// @downloadURL  https://raw.githubusercontent.com/AsumaGC/PortugalMap/blob/master/minimap.user.js
 // @grant        none
 // ==/UserScript==
 
@@ -18,7 +18,7 @@ Number.prototype.between = function(a, b) {
   return this > min && this < max;
 };
 var range = 25;
-window.baseTepmlateUrl = 'https://raw.githubusercontent.com/AsumaGC/Brasil-Map/master/';
+window.baseTepmlateUrl = 'https://raw.githubusercontent.com/AsumaGC/PortugalMap/master/';
 
 window.addEventListener('load', function () {
     //Regular Expression to get coordinates out of URL
@@ -52,12 +52,12 @@ window.addEventListener('load', function () {
     //Cachebreaker to force refresh
     cachebreaker = null;
 	
-    vers = "вrαsiℓ ʑσทє";
+    vers = "𝓟𝓸𝓻𝓽𝓾𝓰𝓪𝓵 𝓩𝓸𝓷𝓮";
 
     var div = document.createElement('div');
     div.setAttribute('class', 'post block bc2');
     div.innerHTML = '<div id="minimapbg" style="position: absolute; right: 0.6em; bottom: 0.6em; z-index: 2;">' +
-        '<div class="posy" id="posyt" style="background-size: 100%; background-image: url(https://i.imgur.com/2qu5Wch.png); color: rgb(255, 255, 255); text-align: center; line-height: 42px; vertical-align: middle; width: auto; height: auto; border-radius: 12px; padding: 10px;">' +
+        '<div class="posy" id="posyt" style="background-size: 100%; background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Flag_of_Portugal_%281495%29.svg/1280px-Flag_of_Portugal_%281495%29.svg.png); color: rgb(255, 255, 255); text-align: center; line-height: 42px; vertical-align: middle; width: auto; height: auto; border-radius: 12px; padding: 10px;">' +
         '<div id="minimap-text" style="display: none;"></div>' +
         '<div id="minimap-box" style="position: relative;width:400px;height:300px">' +
         '<canvas id="minimap" style="width: 100%; height: 100%;z-index:1;position:absolute;top:0;left:0;"></canvas>' +
