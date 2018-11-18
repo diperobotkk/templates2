@@ -4,8 +4,8 @@
 // @version      1.2.0
 // @description  Portugal
 // @author       ༺鿆Aѕυмα鿆༻#1458
-// @match        https://pixelzone.io/*
-// @match        https://pixelzone.io/*
+// @match        http://pixelzone.io/*
+// @match        http://pixelzone.io/*
 // @homepage     https://Discord.io/PTzone
 // @updateURL    https://raw.githubusercontent.com/AsumaGC/PortugalMap/blob/master/minimap.user.js
 // @downloadURL  https://raw.githubusercontent.com/AsumaGC/PortugalMap/blob/master/minimap.user.js
