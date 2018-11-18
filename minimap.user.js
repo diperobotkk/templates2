@@ -1,12 +1,12 @@
 // ==UserScript==
-// @name         𝓟𝓸𝓻𝓽𝓾𝓰𝓪𝓵 𝓩𝓸𝓷𝓮 Mini map
+// @name         Portugal Mini Map
 // @namespace    http://tampermonkey.net/
-// @version      1.0
-// @description  𝓟𝓸𝓻𝓽𝓾𝓰𝓪𝓵 𝓩𝓸𝓷𝓮
-// @author       ༺鿆Aѕυмα鿆༻
+// @version      1.2.0
+// @description  Portugal
+// @author       ༺鿆Aѕυмα鿆༻#1458
 // @match        https://pixelzone.io/*
-// @match        http://pixelzone.io/*
-// @homepage     https://discord.io/Pt-zone
+// @match        https://pixelzone.io/*
+// @homepage     https://Discord.io/PTzone
 // @updateURL    https://raw.githubusercontent.com/AsumaGC/PortugalMap/blob/master/minimap.user.js
 // @downloadURL  https://raw.githubusercontent.com/AsumaGC/PortugalMap/blob/master/minimap.user.js
 // @grant        none
@@ -51,24 +51,25 @@ window.addEventListener('load', function () {
     needed_templates = null;
     //Cachebreaker to force refresh
     cachebreaker = null;
-	
-    vers = "𝓟𝓸𝓻𝓽𝓾𝓰𝓪𝓵 𝓩𝓸𝓷𝓮";
+
+vers = "Arstotzka";
 
     var div = document.createElement('div');
     div.setAttribute('class', 'post block bc2');
-    div.innerHTML = '<div id="minimapbg" style="position: absolute; right: 0.6em; bottom: 0.6em; z-index: 2;">' +
-        '<div class="posy" id="posyt" style="background-size: 100%; background-image: url(https://www.federalflags.com/resize/Shared/Images/Product/Portugal-Flag/Portugal-Flag.jpg?bw=1000&w=1000&bh=1000&h=1000); color: rgb(255, 255, 255); text-align: center; line-height: 42px; vertical-align: middle; width: auto; height: auto; border-radius: 12px; padding: 10px;">' +
+    div.innerHTML = '<div id="minimapbg" style="position: absolute; right: 1em; bottom: 1em;">' +
+        '<div class="posy" id="posyt" style="background-size: 100%; background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/1200px-Flag_of_Portugal.svg.png); color: rgb(255, 255, 255); text-align: center; line-height: 42px; vertical-align: middle; width: auto; height: auto; border-radius: 12px; padding: 10px;">' +
         '<div id="minimap-text" style="display: none;"></div>' +
-        '<div id="minimap-box" style="position: relative;width:400px;height:300px">' +
+        '<div id="minimap-box" style="position: relative;width:420px;height:300px">' +
         '<canvas id="minimap" style="width: 100%; height: 100%;z-index:1;position:absolute;top:0;left:0;"></canvas>' +
         '<canvas id="minimap-board" style="width: 100%; height: 100%;z-index:2;position:absolute;top:0;left:0;"></canvas>' +
         '<canvas id="minimap-cursor" style="width: 100%; height: 100%;z-index:3;position:absolute;top:0;left:0;"></canvas>' +
         '</div><div id="minimap-config" style="line-height:20px;">' +
-        '<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet"> <i class="em em-flag-pt"></i> | <span id="hide-map" style="cursor:pointer;color:white">𝑴𝒊𝒏𝒊𝒎𝒊𝒛𝒂𝒓' +
-        '</span> | <span id="follow-mouse" style="cursor:pointer;">𝑺𝒆𝒈𝒖𝒊𝒓 𝒐 𝒎𝒐𝒖𝒔𝒆' +
-        '</span> | 𝒁𝒐𝒐𝒎: <span id="zoom-plus" style="cursor:pointer;font-weight:bold;">▲</span>' +
-        '<span id="zoom-minus" style="cursor:pointer;font-weight:bold;">▼</span>' +
-        ' | <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet"> <i class="em em-flag-pt"></i><br />' + vers +
+		'<a href=https://discord.gg/JM9etm6 target="_blank">Discord' +
+	'</a> |' +
+        '</a> | <span id="hide-map" style="cursor:pointer;">Hide minimap' +
+        '</span> | <span id="follow-mouse" style="cursor:pointer;"Follow mouse' +
+        '</span> | Zoom: <span id="zoom-plus" style="cursor:pointer;font-weight:bold;">+</span>  /  ' +
+        '<span id="zoom-minus" style="cursor:pointer;font-weight:bold;">-</span>' +
         '</div>' +
         '</div>';
     document.body.appendChild(div);
@@ -100,7 +101,7 @@ window.addEventListener('load', function () {
         document.getElementById("minimap-box").style.display = "none";
         document.getElementById("minimap-config").style.display = "none";
         document.getElementById("minimap-text").style.display = "block";
-        document.getElementById("minimap-text").innerHTML = "𝑬𝒙𝒑𝒂𝒏𝒅𝒊𝒓 𝒎𝒂𝒑𝒂";
+        document.getElementById("minimap-text").innerHTML = "Show Mini Map";
         document.getElementById("minimap-text").style.cursor = "pointer";
     };
     document.getElementById("minimap-text").onclick = function () {
@@ -132,13 +133,13 @@ window.addEventListener('load', function () {
     document.getElementById("follow-mouse").onclick = function () {
         toggle_follow = !toggle_follow;
         if (toggle_follow) {
-            this.innerHTML = "𝑺𝒆𝒈𝒖𝒊𝒓 𝒂 𝒕𝒆𝒍𝒂";
+            this.innerHTML = "Follow mouse";
             loadTemplates();
             x_window = x;
             y_window = y;
             drawCursor();
         } else {
-            this.innerHTML = "𝑺𝒆𝒈𝒖𝒊𝒓 𝒐 𝒎𝒐𝒖𝒔𝒆";
+            this.innerHTML = "Follow";
             getCenter();
         }
     };
@@ -155,8 +156,11 @@ window.addEventListener('load', function () {
         if (!toggle_show)
             return;
         coorDOM = document.getElementById("coords");
-        x_new = coorDOM.innerHTML.replace(rec, '$1');
-        y_new = coorDOM.innerHTML.replace(rec, '$2');
+        coordsXY = coorDOM.innerHTML.split(/(\d+)/)
+        //console.log(coordsXY);
+        x_new = (coordsXY[0].substring(2) + coordsXY[1])*1
+        y_new = (coordsXY[2].substring(3) + coordsXY[3])*1;
+        //console.log({x_new,y_new});
         if (x != x_new || y != y_new) {
             x = parseInt(x_new);
             y = parseInt(y_new);
@@ -164,9 +168,8 @@ window.addEventListener('load', function () {
                 x_window = x;
                 y_window = y;
             } else {
-				getCenter();
+                drawCursor();
             }
-			drawCursor();
             loadTemplates();
         }
     }, false);
@@ -180,7 +183,7 @@ function updateloop() {
     console.log("Updating Template List");
     // Get JSON of available templates
     var xmlhttp = new XMLHttpRequest();
-    var url = window.baseTepmlateUrl + "/templates/data.json";
+    var url = window.baseTepmlateUrl + "templates/data.json?" + new Date().getTime();
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             template_list = JSON.parse(this.responseText);
@@ -211,7 +214,7 @@ function toggleShow() {
         document.getElementById("minimap-box").style.display = "none";
         document.getElementById("minimap-config").style.display = "none";
         document.getElementById("minimap-text").style.display = "block";
-        document.getElementById("minimap-text").innerHTML = "Karte erweitern";
+        document.getElementById("minimap-text").innerHTML = "Show Minimap";
         document.getElementById("minimapbg").onclick = function () {
             toggleShow()
         };
@@ -260,7 +263,7 @@ function loadTemplates() {
     //console.log("x_right : " + x_right);
     //console.log("y_top : " + y_top);
     //console.log("y_bottom : " + y_bottom);
-    console.log(template_list);
+    //console.log(template_list);
     var keys = [];
     for (var k in template_list) keys.push(k);
     needed_templates = [];
@@ -272,11 +275,11 @@ function loadTemplates() {
         var temp_y = parseInt(template_list[template]["y"]) * 1;
         var temp_xr = parseInt(template_list[template]["x"]) + parseInt(template_list[template]["width"]);
         var temp_yb = parseInt(template_list[template]["y"]) + parseInt(template_list[template]["height"]);
-
-         if (temp_xr <= x_left || temp_yb <= y_top || temp_x >= x_right || temp_y >= y_bottom)
+        // if (temp_xr <= x_left || temp_yb <= y_top || temp_x >= x_right || temp_y >= y_bottom)
+        //    continue
+        if (!x_window.between(temp_x-range*1, temp_xr+range*1))
             continue
-		console.log(x_window + ", " + y_window);
-        if (!x_window.between(temp_x, temp_xr) && !y_window.between(temp_y, temp_yb))
+        if (!y_window.between(temp_y-range*1, temp_yb+range*1))
             continue
         console.log("Template " + template + " is in range!");
         // console.log(x_window, y_window);
@@ -286,7 +289,7 @@ function loadTemplates() {
         if (zooming_in == false && zooming_out == false) {
             document.getElementById("minimap-box").style.display = "none";
             document.getElementById("minimap-text").style.display = "block";
-            document.getElementById("minimap-text").innerHTML = "𝑵𝒂̃𝒐 𝒉𝒂́ 𝒕𝒆𝒎𝒑𝒍𝒂𝒕𝒆𝒔 𝒂𝒒𝒖𝒊";
+            document.getElementById("minimap-text").innerHTML = "No template nearby.";
         }
     } else {
         document.getElementById("minimap-box").style.display = "block";
@@ -309,9 +312,9 @@ function loadImage(imagename) {
     console.log("    Load image " + imagename);
     image_list[imagename] = new Image();
     if (cachebreaker != null)
-        image_list[imagename].src = window.baseTepmlateUrl + "/images/" + template_list[imagename].name;
+        image_list[imagename].src = window.baseTepmlateUrl +"images/"+template_list[imagename].name;
     else
-        image_list[imagename].src = window.baseTepmlateUrl + "/images/" + template_list[imagename].name;
+        image_list[imagename].src = window.baseTepmlateUrl +"images/"+ template_list[imagename].name;
     image_list[imagename].onload = function () {
         counter += 1;
         //if last needed image loaded, start drawing
@@ -382,8 +385,8 @@ function drawCursor() {
 
 function getCenter() {
     var url = window.location.href;
-    x_window = +url.split("?p=")[1].split(",")[0];
-    y_window = ++url.split("?p=")[1].split(",")[1];
+    x_window = url.replace(re, '$2');
+    y_window = url.replace(re, '$3');
     if (x_window == url || y_window == url) {
         x_window = 0;
         y_window = 0;
@@ -405,3 +408,4 @@ function findCoor() {
     });*/
     coorDOM = document.getElementById("coords");
 }
+
