@@ -1,12 +1,12 @@
 // ==UserScript==
-// @name         Portugal Mini Map
+// @name         Anime Kingdom Minimap
 // @namespace    http://tampermonkey.net/
 // @version      1.2.0
-// @description  Portugal
+// @description  Anime Kingdom
 // @author       ༺鿆Aѕυмα鿆༻#1458
 // @match        http://pixelzone.io/*
 // @match        http://pixelzone.io/*
-// @homepage     https://Discord.io/PTzone
+// @homepage     https://discord.io/anime-kingdom
 // @updateURL    https://raw.githubusercontent.com/AsumaGC/PortugalMap/blob/master/minimap.user.js
 // @downloadURL  https://raw.githubusercontent.com/AsumaGC/PortugalMap/blob/master/minimap.user.js
 // @grant        none
@@ -57,7 +57,7 @@ vers = "Arstotzka";
     var div = document.createElement('div');
     div.setAttribute('class', 'post block bc2');
     div.innerHTML = '<div id="minimapbg" style="position: absolute; right: 1em; bottom: 1em;">' +
-        '<div class="posy" id="posyt" style="background-size: 100%; background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/1200px-Flag_of_Portugal.svg.png); color: rgb(255, 255, 255); text-align: center; line-height: 42px; vertical-align: middle; width: auto; height: auto; border-radius: 12px; padding: 10px;">' +
+        '<div class="posy" id="posyt" style="background-size: 100%; background-image: url(https://media.discordapp.net/attachments/524005955818749964/524017116177891332/animekingdom.png); color: rgb(255, 255, 255); text-align: center; line-height: 42px; vertical-align: middle; width: auto; height: auto; border-radius: 12px; padding: 10px;">' +
         '<div id="minimap-text" style="display: none;"></div>' +
         '<div id="minimap-box" style="position: relative;width:420px;height:300px">' +
         '<canvas id="minimap" style="width: 100%; height: 100%;z-index:1;position:absolute;top:0;left:0;"></canvas>' +
