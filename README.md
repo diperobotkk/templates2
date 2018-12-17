@@ -1,2 +1,2 @@
-# Portugal Mini Map
-Portugal Mini Map feito por Asuma!
+# Anime Kingdom
+Anime Kingdom Map feito por Asuma!
