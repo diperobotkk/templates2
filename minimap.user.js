@@ -57,7 +57,7 @@ vers = "Arstotzka";
     var div = document.createElement('div');
     div.setAttribute('class', 'post block bc2');
     div.innerHTML = '<div id="minimapbg" style="position: absolute; right: 1em; bottom: 1em;">' +
-        '<div class="posy" id="posyt" style="background-size: 100%; background-image: url(https://www.wallpaperup.com/uploads/wallpapers/2014/02/21/263756/2ca4f439d2bd408d86b897d593cc694f.jpg); color: rgb(255, 255, 255); text-align: center; line-height: 42px; vertical-align: middle; width: auto; height: auto; border-radius: 12px; padding: 10px;">' +
+        '<div class="posy" id="posyt" style="background-size: 100%; background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw-ZfRFPBAcTIs00GGD7ri_JNxcdP3GKms0kH5IQoknWNLTKm-); color: rgb(255, 255, 255); text-align: center; line-height: 42px; vertical-align: middle; width: auto; height: auto; border-radius: 12px; padding: 10px;">' +
         '<div id="minimap-text" style="display: none;"></div>' +
         '<div id="minimap-box" style="position: relative;width:420px;height:300px">' +
         '<canvas id="minimap" style="width: 100%; height: 100%;z-index:1;position:absolute;top:0;left:0;"></canvas>' +
