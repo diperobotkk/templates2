@@ -129,17 +129,6 @@ vers = "Arstotzka";
     document.getElementById("zoom-minus").addEventListener('mouseup', function (e) {
         zooming_out = false;
     }, false);
-    document.getElementById("follow-mouse").onclick = function () {
-        toggle_follow = !toggle_follow;
-        if (toggle_follow) {
-            this.innerHTML = "Follow mouse";
-            loadTemplates();
-            x_window = x;
-            y_window = y;
-            drawCursor();
-        } else {
-            this.innerHTML = "Follow";
-            getCenter();
         }
     };
 
