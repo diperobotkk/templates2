@@ -405,3 +405,4 @@ function findCoor() {
         }
     });*/
     coorDOM = document.getElementById("coords");
+}
