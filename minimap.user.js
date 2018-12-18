@@ -67,7 +67,6 @@ vers = "Arstotzka";
 		'<a href=https://discord.gg/FNRH8RF target="_black">Discord' +
 	'</a> |' +
         '</a> | <span id="hide-map" style="cursor:pointer;">Hide minimap' +
-        '</span> | <span id="follow-mouse" style="cursor:pointer;"Follow mouse' +
         '</span> | Zoom: <span id="zoom-plus" style="cursor:pointer;font-weight:bold;">+</span>  /  ' +
         '<span id="zoom-minus" style="cursor:pointer;font-weight:bold;">-</span>' +
         '</div>' +
