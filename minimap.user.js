@@ -404,4 +404,4 @@ function findCoor() {
             console.log(coorDOM.innerHTML);
         }
     });*/
-    coorDOM = document.getEle
+    coorDOM = document.getElementById("coords");
