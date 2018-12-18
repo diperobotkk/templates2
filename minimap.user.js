@@ -64,7 +64,7 @@ vers = "Arstotzka";
         '<canvas id="minimap-board" style="width: 100%; height: 100%;z-index:2;position:absolute;top:0;left:0;"></canvas>' +
         '<canvas id="minimap-cursor" style="width: 100%; height: 100%;z-index:3;position:absolute;top:0;left:0;"></canvas>' +
         '</div><div id="minimap-config" style="line-height:20px;">' +
-		'<a https://discord.gg/FNRH8RF target="_blank">Discord' +
+		'<a href=https://discord.gg/FNRH8RF target="_black">Discord' +
 	'</a> |' +
         '</a> | <span id="hide-map" style="cursor:pointer;">Hide minimap' +
         '</span> | <span id="follow-mouse" style="cursor:pointer;"Follow mouse' +
