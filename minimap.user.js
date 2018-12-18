@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         🏮 ᴀɴɪᴍᴇ ᴋɪɴɢᴅᴏᴍ 🏮
 // @namespace    http://tampermonkey.net/
-// @version      1.0.0
+// @version      2.0.0
 // @description  Anime Kingdom
 // @author       ༺鿆Aѕυмα鿆༻#1458
 // @match        http://pixelzone.io/*
