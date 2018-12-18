@@ -56,8 +56,8 @@ vers = "Arstotzka";
 
     var div = document.createElement('div');
     div.setAttribute('class', 'post block bc2');
-    div.innerHTML = '<div id="minimapbg" style="position: absolute; right: 1em; bottom: 1em;">' +
-         '<div class="posy" id="posyt" style="background-color: rgba(0, 0, 0, 0.75); color: rgb(250, 250, 250); text-align: center; line-height: 42px; vertical-align: middle; width: auto; height: auto; border-radius: 21px; padding: 6px;">' +
+    div.innerHTML = '<style>.grecaptcha-badge{display: none;}</style>   <div id="minimapbg" style="position: absolute; right: 1em; bottom: 1em;">' +
+'<div class="posy" id="posyt" style="color: rgb(255, 255, 255); text-align: center; line-height: 42px; vertical-align: middle; width: auto; height: auto; border-radius: 12px; padding: 10px;background: #000000d0;">' +
         '<div id="minimap-text" style="display: none;"></div>' +
         '<div id="minimap-box" style="position: relative;width:420px;height:300px">' +
         '<canvas id="minimap" style="width: 100%; height: 100%;z-index:1;position:absolute;top:0;left:0;"></canvas>' +
@@ -66,7 +66,7 @@ vers = "Arstotzka";
         '</div><div id="minimap-config" style="line-height:20px;">' +
 		'<a href=https://discord.gg/FNRH8RF target="_blank">Discord' +
 	'</a> |' +
-        '</a> | <span id="hide-map" style="cursor:pointer;">Hide minimap' +
+        '</a> | <span id="hide-map" style="cursor:pointer;">Esconder' +
         '</span> | <span id="follow-mouse" style="cursor:pointer;"Follow mouse' +
         '</span> | Zoom: <span id="zoom-plus" style="cursor:pointer;font-weight:bold;">+</span>  /  ' +
         '<span id="zoom-minus" style="cursor:pointer;font-weight:bold;">-</span>' +
@@ -101,7 +101,7 @@ vers = "Arstotzka";
         document.getElementById("minimap-box").style.display = "none";
         document.getElementById("minimap-config").style.display = "none";
         document.getElementById("minimap-text").style.display = "block";
-        document.getElementById("minimap-text").innerHTML = "Show Mini Map";
+        document.getElementById("minimap-text").innerHTML = "Mostrar";
         document.getElementById("minimap-text").style.cursor = "pointer";
     };
     document.getElementById("minimap-text").onclick = function () {
