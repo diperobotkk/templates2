@@ -90,8 +90,8 @@ vers = "Arstotzka";
     ctx_minimap.msImageSmoothingEnabled = false;
     ctx_minimap.imageSmoothingEnabled = false;
 
-    drawBoard();
-     drawCursor();
+     drawBoard();
+    drawCursor();
 
     document.getElementById("hide-map").onclick = function () {
         console.log("This should do something, but it doesn't");
@@ -404,5 +404,4 @@ function findCoor() {
             console.log(coorDOM.innerHTML);
         }
     });*/
-    coorDOM = document.getElementById("coords");
-}
+    coorDOM = document.getEle
