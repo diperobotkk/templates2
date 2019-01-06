@@ -17,7 +17,7 @@ Number.prototype.between = function(a, b) {
     max = Math.max.apply(Math, [a, b]);
   return this > min && this < max;
 };
-var range = 220;
+var range = 25;
 window.baseTepmlateUrl = 'https://raw.githubusercontent.com/AsumaGC/AnimeKingdom/master/';
 
 window.addEventListener('load', function () {
@@ -130,19 +130,6 @@ vers = "Arstotzka";
     document.getElementById("zoom-minus").addEventListener('mouseup', function (e) {
         zooming_out = false;
     }, false);
-    document.getElementById("follow-mouse").onclick = function () {
-        toggle_follow = !toggle_follow;
-        if (toggle_follow) {
-            this.innerHTML = "Follow mouse";
-            loadTemplates();
-            x_window = x;
-            y_window = y;
-            drawCursor();
-        } else {
-            this.innerHTML = "Follow";
-            getCenter();
-        }
-    };
 
     gameWindow = document.getElementById("canvas");
     gameWindow.addEventListener('mouseup', function (evt) {
