@@ -1,30 +1,9 @@
 {
  "Bandeira": {
-  "name": "FlagZonenova.png",
-  "x":2153,
-  "y": 3105,
-  "width": 1943,
-  "height": 991
- },
- "Discord": {
- "name": "discord.png",
- "x": 1591,
- "y": 3412,
- "width": 100,
- "height": 100
- },
- "logo": {
- "name": "template (1).png",
- "x": 2848,
- "y": -2394,
- "width": 251,
- "height": 124
- },
- "Loli": {
- "name": "transferir (2).png",
- "x": 2580,
- "y": -2455,
- "width": 256,
- "height": 256
+  "name": "flagiron.png",
+  "x": -4096,
+  "y": -4096,
+  "width": 1351,
+  "height": 792
  }
 }
