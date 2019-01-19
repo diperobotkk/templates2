@@ -13,6 +13,13 @@
   "width": 667,
   "height": 111
 },
+ "pay": {
+  "name": "pay.png",
+  "x": -150,
+  "y": -150,
+  "width": 300,
+  "height": 300 
+},
  "NC": {
   "name": "NC.png",
   "x": 390,
