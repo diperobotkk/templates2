@@ -13,6 +13,13 @@
   "width": 667,
   "height": 111
 },
+ "Britfasc": {
+  "name": "britfasc.png",
+  "x": -19,
+  "y": 481,
+  "width": 318,
+  "height": 178
+},
  "pay": {
   "name": "pay.png",
   "x": -150,
