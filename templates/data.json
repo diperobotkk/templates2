@@ -13,6 +13,13 @@
   "width": 667,
   "height": 111
 },
+ "Stand": {
+  "name": "standyourground.png",
+  "x": 139,
+  "y": -419,
+  "width": 500,
+  "height": 500
+},
  "Britfasc": {
   "name": "britfasc.png",
   "x": -19,
