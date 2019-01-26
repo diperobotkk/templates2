@@ -13,6 +13,13 @@
   "width": 667,
   "height": 111
 },
+  "kektop": {
+  "name": "kektop.png",
+  "x": -472,
+  "y": 403,
+  "width": 239,
+  "height": 141
+},
  "Stand": {
   "name": "standyourground.png",
   "x": 139,
