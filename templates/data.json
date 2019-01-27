@@ -13,6 +13,13 @@
   "width": 667,
   "height": 111
 },
+ "VoxedLose": {
+  "name": "lose.png",
+  "x": 14,
+  "y": 401,
+  "width": 228,
+  "height": 80
+},
   "kektop": {
   "name": "kektop.png",
   "x": -472,
