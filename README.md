@@ -1,2 +1,1 @@
-# 卍 ɴᴀᴢɪcanvas ᴢᴏɴᴇ 卐
-By: ༺鿆Aѕυмα鿆༻
+Mapa Argentino en PixelZone.io
