@@ -2,7 +2,7 @@ MiniMapa Argentino 🌞 en PixelZone.io
 
 --------------------------------------------------------------
 
-■■■ **Instalación** ■■■
+### **Instalación** ###
 
 
 
