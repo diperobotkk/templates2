@@ -18,7 +18,7 @@ Number.prototype.between = function(a, b) {
   return this > min && this < max;
 };
 var range = 25;
-window.baseTepmlateUrl = 'https://raw.githubusercontent.com/AsumaGC/NaziZone/master/';
+window.baseTepmlateUrl = 'https://raw.githubusercontent.com/Pinkfloydd/ArgentinaMap_PixelZone/master/';
 
 window.addEventListener('load', function () {
     //Regular Expression to get coordinates out of URL
