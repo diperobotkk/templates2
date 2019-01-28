@@ -24,4 +24,6 @@ Abriendo el siguiente link debería dar la posibilidad de instalarlo directo:
 
 https://github.com/Pinkfloydd/ArgentinaMap_PixelZone/raw/master/minimap.user.js
 
-Recargar PixelZone.io y al pasar el mouse por encima de las coordenadas de la zona Argentina, aparecerá el minimapa abajo a la derecha.
+--------------------------------------------------------------
+
+Recargar la web de PixelZone.io y al pasar el mouse por encima de las coordenadas de la zona Argentina, aparecerá el minimapa abajo a la derecha.
