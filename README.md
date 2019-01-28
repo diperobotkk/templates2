@@ -1,1 +1,1 @@
-Mapa Argentino 🌞 en PixelZone.io
+MiniMapa Argentino 🌞 en PixelZone.io
