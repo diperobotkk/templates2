@@ -20,7 +20,7 @@ https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldm
 
 ••• 2do Paso •••
 
-Abriendo el siguiente link debería dar la posibilidad de instalarlo directo:
+Abrir el siguiente link dando la posibilidad de instalarlo directo:
 
 https://github.com/Pinkfloydd/ArgentinaMap_PixelZone/raw/master/minimap.user.js
 
