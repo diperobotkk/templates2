@@ -1,79 +1,9 @@
 {
- "Bandeira": {
-  "name": "flagiron.png",
-  "x": -4096,
-  "y": -4096,
-  "width": 1500,
-  "height": 792
-},
- "Spain": {
-  "name": "spain.png",
-  "x": 2658,
-  "y": -1480,
-  "width": 667,
-  "height": 111
-},
- "VoxedLose": {
-  "name": "lose.png",
-  "x": -14,
-  "y": 401,
-  "width": 228,
-  "height": 80
-},
-  "kektop": {
-  "name": "kektop.png",
-  "x": -472,
-  "y": 403,
-  "width": 239,
-  "height": 141
-},
- "Stand": {
-  "name": "standyourground.png",
-  "x": 139,
-  "y": -419,
-  "width": 500,
-  "height": 500
-},
- "Britfasc": {
-  "name": "britfasc.png",
+ "ARG": {
+  "name": "ARG.png",
   "x": -19,
   "y": 481,
   "width": 318,
   "height": 178
-},
- "pay": {
-  "name": "pay.png",
-  "x": -150,
-  "y": -150,
-  "width": 300,
-  "height": 300 
-},
- "NC": {
-  "name": "NC.png",
-  "x": 390,
-  "y": 25,
-  "width": 216,
-  "height": 275 
-},
- "Crosspepe": {
-  "name": "crosspepe.png",
-  "x": -357,
-  "y": -672,
-  "width": 570,
-  "height": 281
-},
- "Ajax": {
-  "name": "Ajax.png",
-  "x": 30,
-  "y": -390,
-  "width": 225,
-  "height": 155 
-},
- "FlexOnEMF": {
-  "name": "FlexOnEMF.png",
-  "x": 225,
-  "y": 88,
-  "width": 127,
-  "height": 191
- }
+}
 }
