@@ -1,14 +1,14 @@
 // ==UserScript==
-// @name         卍 ɴᴀᴢɪ ᴢᴏɴᴇ 卐
+// @name         Mapa Argentino
 // @namespace    http://tampermonkey.net/
-// @version      1.2.2
-// @description  Nazicanvas.io
-// @author       ༺鿆Aѕυмα鿆༻
+// @version      1.0
+// @description  MapaArgentino.io
+// @author       ~~~
 // @match        http://pixelzone.io/*
 // @match        http://pixelzone.io/*
-// @homepage     https://discord.gg/3K6rQF
-// @updateURL    https://raw.githubusercontent.com/AsumaGC/NaziZone/blob/master/minimap.user.js
-// @downloadURL  https://raw.githubusercontent.com/AsumaGC/NaziZone/blob/master/minimap.user.js
+// @homepage     ~~~
+// @updateURL    https://raw.githubusercontent.com/Pinkfloydd/ArgentinaMap_PixelZone/blob/master/minimap.user.js
+// @downloadURL  https://raw.githubusercontent.com/Pinkfloydd/ArgentinaMap_PixelZone/blob/master/minimap.user.js
 // @grant        none
 // ==/UserScript==
 
