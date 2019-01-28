@@ -4,7 +4,7 @@
 // @version      1.0
 // @description  MapaArgentino.io
 // @author       ~~~
-// @match        http://pixelzone.io/*
+// @match        https://pixelzone.io/*
 // @match        http://pixelzone.io/*
 // @homepage     ~~~
 // @updateURL    https://raw.githubusercontent.com/Pinkfloydd/ArgentinaMap_PixelZone/blob/master/minimap.user.js
