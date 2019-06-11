@@ -15,3 +15,16 @@
 
 #### Etapa 2: Instalar o minimapa.
 * [Clique aqui](https://github.com/AsumaGc/ImperioMap/raw/master/minimap.user.js)
+
+## Informações
+> Lista de informações para contactar.
+
+####Servidor discord:
+* [Discord] (https://discord.gg/B6RF4gw)
+
+####Criador:
+* [Asuma] ༺鿆Aѕυмα鿆༻#1590
+
+####Fork:
+* [Github Content] (https://github.com/AsumaGC/PixelPlanet.fun-Map)
+
