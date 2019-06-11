@@ -3,6 +3,7 @@
 > Mapa criado para a facção Império Brasil.
 
 ## Instalação
+> Siga as etapas para baixar o minimapa, caso tenha duvido contacte um staff.
 
 #### Etapa 1: Baixar a extensão tampermonkey.
 * ![](https://raw.githubusercontent.com/reek/anti-adblock-killer/gh-pages/images/firefox.png) [Greasemonkey](https://addons.mozilla.org/firefox/addon/greasemonkey/)
