@@ -1,14 +1,14 @@
 // ==UserScript==
-// @name         Mapa Argentino
+// @name         Império Brasil Map
 // @namespace    http://tampermonkey.net/
 // @version      1.0
-// @description  MapaArgentino.io
-// @author       ~~~
+// @description  Mapa para a facção Império Brasil
+// @author       ༺鿆Aѕυмα鿆༻#1590
 // @match        https://pixelzone.io/*
 // @match        http://pixelzone.io/*
-// @homepage     ~~~
-// @updateURL    https://raw.githubusercontent.com/Pinkfloydd/ArgentinaMap_PixelZone/blob/master/minimap.user.js
-// @downloadURL  https://raw.githubusercontent.com/Pinkfloydd/ArgentinaMap_PixelZone/blob/master/minimap.user.js
+// @homepage     https://discord.gg/B6RF4gw
+// @updateURL    https://raw.githubusercontent.com/zAsuma/ImperioMap/blob/master/minimap.user.js
+// @downloadURL  https://raw.githubusercontent.com/zAsuma/ImperioMap/blob/master/minimap.user.js
 // @grant        none
 // ==/UserScript==
 
@@ -18,7 +18,7 @@ Number.prototype.between = function(a, b) {
   return this > min && this < max;
 };
 var range = 25;
-window.baseTepmlateUrl = 'https://raw.githubusercontent.com/Pinkfloydd/ArgentinaMap_PixelZone/master/';
+window.baseTepmlateUrl = 'https://raw.githubusercontent.com/zAsuma/ImperioMap/master/';
 
 window.addEventListener('load', function () {
     //Regular Expression to get coordinates out of URL
@@ -52,20 +52,20 @@ window.addEventListener('load', function () {
     //Cachebreaker to force refresh
     cachebreaker = null;
 
-vers = "Arstotzka";
+vers = "Império Brasil";
 
     var div = document.createElement('div');
     div.setAttribute('class', 'post block bc2');
     div.innerHTML = '<style>.grecaptcha-badge{display: none;}</style>   <div id="minimapbg" style="position: absolute; right: 1em; bottom: 1em;">' +
-'<div class="posy" id="posyt" style="background-size: 100%; background-image: url(https://imgur.com/8rmVmFp); color: rgb(255, 255, 255); text-align: center; line-height: 42px; vertical-align: middle; width: auto; height: auto; border-radius: 12px; padding: 10px;">' +
+'<div class="posy" id="posyt" style="background-size: 100%; background-image: url(); color: rgb(255, 255, 255); text-align: center; line-height: 42px; vertical-align: middle; width: auto; height: auto; border-radius: 12px; padding: 10px;">' +
         '<div id="minimap-text" style="display: none;"></div>' +
         '<div id="minimap-box" style="position: relative;width:420px;height:300px">' +
         '<canvas id="minimap" style="width: 100%; height: 100%;z-index:1;position:absolute;top:0;left:0;"></canvas>' +
         '<canvas id="minimap-board" style="width: 100%; height: 100%;z-index:2;position:absolute;top:0;left:0;"></canvas>' +
         '<canvas id="minimap-cursor" style="width: 100%; height: 100%;z-index:3;position:absolute;top:0;left:0;"></canvas>' +
         '</div><div id="minimap-config" style="line-height:20px;">' +
-        '<span id="hide-map" style="cursor:pointer;">Hide Minimap' +
-        '</span> | <span id="follow-mouse" style="cursor:pointer;"Follow mouse' +
+        '<span id="hide-map" style="cursor:pointer;">Esconder' +
+        '</span> | <span id="follow-mouse" style="cursor:pointer;"Seguir mouse' +
         '</span> | Zoom: <span id="zoom-plus" style="cursor:pointer;font-weight:bold;">+</span>  /  ' +
         '<span id="zoom-minus" style="cursor:pointer;font-weight:bold;">-</span>' +
         '</div>' +
@@ -99,7 +99,7 @@ vers = "Arstotzka";
         document.getElementById("minimap-box").style.display = "none";
         document.getElementById("minimap-config").style.display = "none";
         document.getElementById("minimap-text").style.display = "block";
-        document.getElementById("minimap-text").innerHTML = "Show";
+        document.getElementById("minimap-text").innerHTML = "Mostrar";
         document.getElementById("minimap-text").style.cursor = "pointer";
     };
     document.getElementById("minimap-text").onclick = function () {
@@ -199,7 +199,7 @@ function toggleShow() {
         document.getElementById("minimap-box").style.display = "none";
         document.getElementById("minimap-config").style.display = "none";
         document.getElementById("minimap-text").style.display = "block";
-        document.getElementById("minimap-text").innerHTML = "Show Minimap";
+        document.getElementById("minimap-text").innerHTML = "Mostrar";
         document.getElementById("minimapbg").onclick = function () {
             toggleShow()
         };
@@ -274,7 +274,7 @@ function loadTemplates() {
         if (zooming_in == false && zooming_out == false) {
             document.getElementById("minimap-box").style.display = "none";
             document.getElementById("minimap-text").style.display = "block";
-            document.getElementById("minimap-text").innerHTML = "No templates here.";
+            document.getElementById("minimap-text").innerHTML = "Nenhuma template aqui.";
         }
     } else {
         document.getElementById("minimap-box").style.display = "block";
