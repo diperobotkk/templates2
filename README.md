@@ -19,12 +19,12 @@
 ## Informações
 > Lista de informações para contactar.
 
-####Servidor discord:
-* [Discord] (https://discord.gg/B6RF4gw)
+#### Servidor discord:
+* [Discord](https://discord.gg/B6RF4gw)
 
-####Criador:
+#### Criador:
 * [Asuma] ༺鿆Aѕυмα鿆༻#1590
 
-####Fork:
-* [Github Content] (https://github.com/AsumaGC/PixelPlanet.fun-Map)
+#### Fork:
+* [Github Content](https://github.com/AsumaGC/PixelPlanet.fun-Map)
 
