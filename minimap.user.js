@@ -68,7 +68,7 @@ vers = "Império Brasil";
         '<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet"> <i class="em em-flag-br"></i> | <span id="hide-map" style="cursor:pointer;">Esconder' +
         '</span> | <span id="follow-mouse" style="cursor:pointer;"Seguir mouse' +
         '</span> | Zoom: <span id="zoom-plus" style="cursor:pointer;font-weight:bold;">+</span>  /  ' +
-        '<span id="zoom-minus" style="cursor:pointer;font-weight:bold;">-</span>' 
+        '<span id="zoom-minus" style="cursor:pointer;font-weight:bold;">-</span>' +
         ' | <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet"> <i class="em em-flag-br"></i><br />' + vers +
         '</div>' +
         '</div>';
