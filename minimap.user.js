@@ -52,7 +52,7 @@ window.addEventListener('load', function () {
     //Cachebreaker to force refresh
     cachebreaker = null;
 
-	vers = "♛ 𝑩𝑹𝑨𝑺𝑰𝑳-𝒁𝑶𝑵𝑬 ♛ 𝑴𝑰𝑵𝑰𝑴𝑨𝑷𝑨 ♛";
+	vers = "𝕴𝖒𝖕𝖊𝖗𝖎𝖔 𝕭𝖗𝖆𝖘𝖎𝖑 𝕸𝖆𝖕";
 
     var div = document.createElement('div');
     div.setAttribute('class', 'post block bc2');
