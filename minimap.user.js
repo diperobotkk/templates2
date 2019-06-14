@@ -66,7 +66,7 @@ window.addEventListener('load', function () {
         '</div><div id="minimap-config" style="line-height:20px;">' +
         		'<a href=https://discord.io/italianempire target="_blank">Discord' +
         '</a> | <span id="hide-map" style="cursor:pointer;font-weight:bold;color: rgb(255, 255, 0);"> Esconder' +
-        '</span> | style="cursor:pointer;font-weight:bold;color: rgb(255, 255, 0);">Zoom: <span id="zoom-plus" style="cursor:pointer;font-weight:bold;color: rgb(0, 255, 0);">+</span>  /  ' +
+        '</span> | style="cursor:pointer;font-weight:bold;color: rgb(255, 255, 0);">Zoom:</span> <span id="zoom-plus" style="cursor:pointer;font-weight:bold;color: rgb(0, 255, 0);">+</span>  /  ' +
         '<span id="zoom-minus" style="cursor:pointer;font-weight:bold;color: rgb(0, 255, 0);">-</span>' +
         '</div>' +
         '</div>';
