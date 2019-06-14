@@ -196,7 +196,7 @@ function toggleShow() {
         document.getElementById("minimap-box").style.display = "none";
         document.getElementById("minimap-config").style.display = "none";
         document.getElementById("minimap-text").style.display = "block";
-        document.getElementById("minimap-text").innerHTML = "Mostrar";
+        document.getElementById("minimap-text").innerHTML = "Mostrar Minimap";
         document.getElementById("minimapbg").onclick = function () {
             toggleShow()
         };
