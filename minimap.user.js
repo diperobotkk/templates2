@@ -12,103 +12,13 @@
 // @grant        none
 // ==/UserScript==
 
-window.baseTepmlateUrl = 'https://raw.githubusercontent.com/Vasco-Pixel/minimapa/master';
-
-
-cssStyle = `
-#minimapbg {
-  position: absolute;
-  right: 1em;
-  bottom: 1em;
-}
-#posyt {
-  background-color: rgba(0, 0, 0, 0.75);
-  color: rgb(250, 250, 250);
-  text-align: center;
-  line-height: 42px;
-  vertical-align: middle;
-  width: auto;
-  height: auto;
-  border-radius: 21px;
-  padding: 6px;
-}
-#minimap-text {
-  display: none;
-}
-#minimap-box {
-  position: relative;
-  width:420px;
-  height:300px;
-}
-#minimap, #minimap-board, #minimap-cursor {
-  width: 100%;
-  height: 100%;
-  position:absolute;
-  top:0;
-  left:0;
-}
-#minimap {
-  z-index:1;
-}
-#minimap-board {
-  z-index:2;
-}
-#minimap-cursor {
-  z-index:3;
-}
-#minimap-config {
-  line-height:20px;
-}
-.map-clickable {
-  cursor: pointer;
-}
-.map-zoom {
-  font-weight:bold;
-}
-#colors {
-  margin-left: 0.333em !important;
-}
-#app > div:nth-child(1) > div:nth-child(9) {
-  position: absolute;
-  bottom: 6em;
-  left: 0.3333em;
-}
-#app > div:nth-child(1) > div:nth-child(9) > div:nth-child(2) {
-  bottom: initial !important;
-  left: initial !important;
-  position: initial !important;
-  display: inline-block !important;
-}
-#app > div:nth-child(1) > div:nth-child(9) > div:nth-child(1) {
-  bottom: initial !important;
-  left: initial !important;
-  position: initial !important;
-  display: inline-block !important;
-}`;
-
-htmlFragment = `
-<div id="minimapbg">
-  <div class="posy" id="posyt">
-    <div id="minimap-text"></div>
-    <div id="minimap-box">
-      <canvas id="minimap"></canvas>
-      <canvas id="minimap-board"></canvas>
-      <canvas id="minimap-cursor"></canvas>
-    </div>
-    <div id="minimap-config">
-      <span class="map-clickable" id="hide-map">Hide Map</span>
-      |
-      <span class="map-clickable" id="follow-mouse">Follow Mouse</span>
-      |
-      <span class="map-clickable" id="toggle-grid">Toggle Grid</span>
-      |
-      Zoom:
-      <span class="map-clickable map-zoom" id="zoom-plus">+</span>
-      /
-      <span class="map-clickable map-zoom" id="zoom-minus">-</span>
-    </div>
-  </div>
-</div>`;
+Number.prototype.between = function(a, b) {
+  var min = Math.min.apply(Math, [a, b]),
+    max = Math.max.apply(Math, [a, b]);
+  return this > min && this < max;
+};
+var range = 25;
+window.baseTepmlateUrl = 'https://raw.githubusercontent.com/zAsuma/ImperioMap/blob/master/';
 
 window.addEventListener('load', function () {
     //Regular Expression to get coordinates out of URL
@@ -127,7 +37,7 @@ window.addEventListener('load', function () {
     y = 0;
     //list of all available templates
     template_list = null;
-    zoomlevel = 9;
+    zoomlevel = 6;
     //toggle options
     toggle_show = true;
     toggle_follow = true; //if minimap is following window, x_window = x and y_window = y;
@@ -142,7 +52,22 @@ window.addEventListener('load', function () {
     //Cachebreaker to force refresh
     cachebreaker = null;
 
-
+    var div = document.createElement('div');
+    div.setAttribute('class', 'post block bc2');
+    div.innerHTML = '<div id="minimapbg" style="position: absolute; right: 0em; bottom: 0em;">' +
+        '<div class="posy" id="posyt" style="background-color: rgba(0, 0, 0, 0.90); color: rgb(250, 250, 250); text-align: center; line-height: 42px; vertical-align: middle; width: auto; height: auto; border-radius: 1px; padding: 1px;">' +
+        '<div id="minimap-text" style="display: none;"></div>' +
+        '<div id="minimap-box" style="position: relative;width:480px;height:400px">' +
+        '<canvas id="minimap" style="width: 100%; height: 100%;z-index:1;position:absolute;top:0;left:0;"></canvas>' +
+        '<canvas id="minimap-board" style="width: 100%; height: 100%;z-index:2;position:absolute;top:0;left:0;"></canvas>' +
+        '<canvas id="minimap-cursor" style="width: 100%; height: 100%;z-index:3;position:absolute;top:0;left:0;"></canvas>' +
+        '</div><div id="minimap-config" style="line-height:15px;">' +
+        '<span id="hide-map" style="cursor:pointer;font-weight:bold;color: rgb(250, 0, 0);"> Esconder' +
+        '</span> | <span id="follow-mouse" style="cursor:pointer;"Seguir o mouse' +
+        '</span> | Zoom: <span id="zoom-plus" style="cursor:pointer;font-weight:bold;color: rgb(0, 100, 250);">+</span>  /  ' +
+        '<span id="zoom-minus" style="cursor:pointer;font-weight:bold;color: rgb(0, 50, 250);">-</span>' +
+        '</div>' +
+        '</div>';
     document.body.appendChild(div);
     minimap = document.getElementById("minimap");
     minimap_board = document.getElementById("minimap-board");
@@ -172,7 +97,7 @@ window.addEventListener('load', function () {
         document.getElementById("minimap-box").style.display = "none";
         document.getElementById("minimap-config").style.display = "none";
         document.getElementById("minimap-text").style.display = "block";
-        document.getElementById("minimap-text").innerHTML = "Mostrar";
+        document.getElementById("minimap-text").innerHTML = "Minimap";
         document.getElementById("minimap-text").style.cursor = "pointer";
     };
     document.getElementById("minimap-text").onclick = function () {
@@ -180,7 +105,7 @@ window.addEventListener('load', function () {
         document.getElementById("minimap-box").style.display = "block";
         document.getElementById("minimap-config").style.display = "block";
         document.getElementById("minimap-text").style.display = "none";
-        document.getElementById("minimap-text").style.cursor = "default";
+        document.getElementById("minimap-text").style.color = "default";
         loadTemplates();
     };
     document.getElementById("zoom-plus").addEventListener('mousedown', function (e) {
@@ -201,7 +126,6 @@ window.addEventListener('load', function () {
     document.getElementById("zoom-minus").addEventListener('mouseup', function (e) {
         zooming_out = false;
     }, false);
-
     gameWindow = document.getElementById("canvas");
     gameWindow.addEventListener('mouseup', function (evt) {
         if (!toggle_show)
@@ -347,7 +271,7 @@ function loadTemplates() {
         if (zooming_in == false && zooming_out == false) {
             document.getElementById("minimap-box").style.display = "none";
             document.getElementById("minimap-text").style.display = "block";
-            document.getElementById("minimap-text").innerHTML = "Nenhuma template aqui.";
+            document.getElementById("minimap-text").innerHTML = "Não tem nada aqui.";
         }
     } else {
         document.getElementById("minimap-box").style.display = "block";
@@ -466,4 +390,3 @@ function findCoor() {
     });*/
     coorDOM = document.getElementById("coords");
 }
-
