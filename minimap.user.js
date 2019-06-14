@@ -63,11 +63,11 @@ window.addEventListener('load', function () {
         '<canvas id="minimap" style="width: 100%; height: 100%;z-index:1;position:absolute;top:0;left:0;"></canvas>' +
         '<canvas id="minimap-board" style="width: 100%; height: 100%;z-index:2;position:absolute;top:0;left:0;"></canvas>' +
         '<canvas id="minimap-cursor" style="width: 100%; height: 100%;z-index:3;position:absolute;top:0;left:0;"></canvas>' +
-        '</div><div id="minimap-config" style="line-height:15px;">' +
-        '<span id="hide-map" style="cursor:pointer;font-weight:bold;color: rgb(250, 0, 0);"> Esconder' +
-        '</span> | <span id="follow-mouse" style="cursor:pointer;"Seguir o mouse' +
-        '</span> | Zoom: <span id="zoom-plus" style="cursor:pointer;font-weight:bold;color: rgb(0, 100, 250);">+</span>  /  ' +
-        '<span id="zoom-minus" style="cursor:pointer;font-weight:bold;color: rgb(0, 50, 250);">-</span>' +
+        '</div><div id="minimap-config" style="line-height:20px;">' +
+        		'<a href=https://discord.io/italianempire target="_blank">Discord' +
+        '</a> | <span id="hide-map" style="cursor:pointer;font-weight:bold;color: rgb(255, 255, 0);"> Esconder' +
+        '</span> | style="cursor:pointer;font-weight:bold;color: rgb(255, 255, 0);">Zoom: <span id="zoom-plus" style="cursor:pointer;font-weight:bold;color: rgb(0, 255, 0);">+</span>  /  ' +
+        '<span id="zoom-minus" style="cursor:pointer;font-weight:bold;color: rgb(0, 255, 0);">-</span>' +
         '</div>' +
         '</div>';
     document.body.appendChild(div);
@@ -99,7 +99,7 @@ window.addEventListener('load', function () {
         document.getElementById("minimap-box").style.display = "none";
         document.getElementById("minimap-config").style.display = "none";
         document.getElementById("minimap-text").style.display = "block";
-        document.getElementById("minimap-text").innerHTML = "Minimap";
+        document.getElementById("minimap-text").innerHTML = "Mostrar";
         document.getElementById("minimap-text").style.cursor = "pointer";
     };
     document.getElementById("minimap-text").onclick = function () {
