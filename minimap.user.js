@@ -12,13 +12,103 @@
 // @grant        none
 // ==/UserScript==
 
-Number.prototype.between = function(a, b) {
-  var min = Math.min.apply(Math, [a, b]),
-    max = Math.max.apply(Math, [a, b]);
-  return this > min && this < max;
-};
-var range = 25;
-window.baseTepmlateUrl = 'https://raw.githubusercontent.com/zAsuma/ImperioMap/master/';
+window.baseTepmlateUrl = 'https://raw.githubusercontent.com/Vasco-Pixel/minimapa/master';
+
+
+cssStyle = `
+#minimapbg {
+  position: absolute;
+  right: 1em;
+  bottom: 1em;
+}
+#posyt {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: rgb(250, 250, 250);
+  text-align: center;
+  line-height: 42px;
+  vertical-align: middle;
+  width: auto;
+  height: auto;
+  border-radius: 21px;
+  padding: 6px;
+}
+#minimap-text {
+  display: none;
+}
+#minimap-box {
+  position: relative;
+  width:420px;
+  height:300px;
+}
+#minimap, #minimap-board, #minimap-cursor {
+  width: 100%;
+  height: 100%;
+  position:absolute;
+  top:0;
+  left:0;
+}
+#minimap {
+  z-index:1;
+}
+#minimap-board {
+  z-index:2;
+}
+#minimap-cursor {
+  z-index:3;
+}
+#minimap-config {
+  line-height:20px;
+}
+.map-clickable {
+  cursor: pointer;
+}
+.map-zoom {
+  font-weight:bold;
+}
+#colors {
+  margin-left: 0.333em !important;
+}
+#app > div:nth-child(1) > div:nth-child(9) {
+  position: absolute;
+  bottom: 6em;
+  left: 0.3333em;
+}
+#app > div:nth-child(1) > div:nth-child(9) > div:nth-child(2) {
+  bottom: initial !important;
+  left: initial !important;
+  position: initial !important;
+  display: inline-block !important;
+}
+#app > div:nth-child(1) > div:nth-child(9) > div:nth-child(1) {
+  bottom: initial !important;
+  left: initial !important;
+  position: initial !important;
+  display: inline-block !important;
+}`;
+
+htmlFragment = `
+<div id="minimapbg">
+  <div class="posy" id="posyt">
+    <div id="minimap-text"></div>
+    <div id="minimap-box">
+      <canvas id="minimap"></canvas>
+      <canvas id="minimap-board"></canvas>
+      <canvas id="minimap-cursor"></canvas>
+    </div>
+    <div id="minimap-config">
+      <span class="map-clickable" id="hide-map">Hide Map</span>
+      |
+      <span class="map-clickable" id="follow-mouse">Follow Mouse</span>
+      |
+      <span class="map-clickable" id="toggle-grid">Toggle Grid</span>
+      |
+      Zoom:
+      <span class="map-clickable map-zoom" id="zoom-plus">+</span>
+      /
+      <span class="map-clickable map-zoom" id="zoom-minus">-</span>
+    </div>
+  </div>
+</div>`;
 
 window.addEventListener('load', function () {
     //Regular Expression to get coordinates out of URL
@@ -52,24 +142,7 @@ window.addEventListener('load', function () {
     //Cachebreaker to force refresh
     cachebreaker = null;
 
-vers = "Iмpérιo Braѕιl";
 
-    var div = document.createElement('div');
-    div.setAttribute('class', 'post block bc2');
-    div.innerHTML = '<style>.grecaptcha-badge{display: none;}</style> <div id="minimapbg" style="position: absolute; right: 1em; bottom: 1em;">' +
-'<div class="posy" id="posyt" style="background-size: 100%; background-image: url(https://i.imgur.com/2qu5Wch.png); color: rgb(255, 255, 255); text-align: center; line-height: 42px; vertical-align: middle; width: auto; height: auto; border-radius: 12px; padding: 10px;">' +
-        '<div id="minimap-text" style="display: none;"></div>' +
-        '<div id="minimap-box" style="position: relative;width:420px;height:300px">' +
-        '<canvas id="minimap" style="width: 100%; height: 100%;z-index:1;position:absolute;top:0;left:0;"></canvas>' +
-        '<canvas id="minimap-board" style="width: 100%; height: 100%;z-index:2;position:absolute;top:0;left:0;"></canvas>' +
-        '<canvas id="minimap-cursor" style="width: 100%; height: 100%;z-index:3;position:absolute;top:0;left:0;"></canvas>' +
-        '</div><div id="minimap-config" style="line-height:20px;">' +
-        '<span id="hide-map" style="cursor:pointer;"> Minimizar' +
-        '</span> | <span id="follow-mouse" style="cursor:pointer;"Seguir o mouse' +
-        '</span> | Zoom: <span id="zoom-plus" style="cursor:pointer;font-weight:bold;">+</span>  /  ' +
-        '<span id="zoom-minus" style="cursor:pointer;font-weight:bold;">-</span>' +
-        '</div>' +
-        '</div>';
     document.body.appendChild(div);
     minimap = document.getElementById("minimap");
     minimap_board = document.getElementById("minimap-board");
