@@ -5,5 +5,12 @@
   "y": 481,
   "width": 318,
   "height": 178
+  },
+  "WorldMap": {
+    "name": "wm.png",
+    "x": -273,
+    "y":  1728,
+    "width": 1363,
+    "height": 635
 }
 }
