@@ -56,7 +56,7 @@ window.addEventListener('load', function () {
 
     var div = document.createElement('div');
     div.setAttribute('class', 'post block bc2');
-    div.innerHTML = '<div id="minimapbg" style="position: absolute; right: 0em; top: 0em;">' +
+    div.innerHTML = '<div id="minimapbg" style="relative: absolute; right: 0em; top: 0em;">' +
         '<div class="posy" id="posyt" style="background-size: 100%; background-image: url(https://i.imgur.com/2qu5Wch.png); color: rgb(255, 255, 255); text-align: center; line-height: 42px; vertical-align: middle; width: auto; height: auto; border-radius: 1px; padding: 1px;">' + vers +
         '<div id="minimap-text" style="display: none;"></div>' +
         '<div id="minimap-box" style="position: relative;width:380px;height:200px">' +
