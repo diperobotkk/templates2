@@ -141,7 +141,7 @@ window.addEventListener('load', function () {
     gameWindow.addEventListener('mousemove', function (evt) {
         if (!toggle_show)
             return;
-        coorDOM = document.getElementsByClassName("coords")[0];
+        coorDOM = document.getElementsById("coords");
         coordsXY = coorDOM.innerHTML.split(/(-?\d+)/)
         //console.log(coordsXY);
         x_new = (coordsXY[0].substring(2) + coordsXY[1])*1
@@ -184,7 +184,7 @@ function updateloop() {
     image_list = [];
     loadTemplates();
 
-    setTimeout(updateloop, 60000)
+    setTimeout(updateloop, 5000)
 }
 
 function toggleShow() {
