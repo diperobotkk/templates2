@@ -1,16 +1,20 @@
 // ==UserScript==
-// @name         Império Brasil Map
-// @namespace    http://tampermonkey.net/
-// @version      1.0
-// @description  Mapa para a facção Império Brasil
-// @author       ༺鿆Aѕυмα鿆༻#1590
+// @name         AncapZone
+// @namespace    Discord.io/AncapZone
+// @version      1.0.0
+// @description  Aqui não há estado!
+// @coder        Aizu
 // @match        https://pixelzone.io/*
 // @match        http://pixelzone.io/*
-// @homepage     https://discord.gg/B6RF4gw
-// @updateURL    https://raw.githubusercontent.com/zAsuma/ImperioMap/blob/master/minimap.user.js
-// @downloadURL  https://raw.githubusercontent.com/zAsuma/ImperioMap/blob/master/minimap.user.js
-// @grant        none
+// @updateURL    http://raw.githubusercontent.com/zAsuma/ancapzone/master/minimap.user.js
+// @downloadURL  http://raw.githubusercontent.com/zAsuma/ancapzone/master/minimap.user.js
 // ==/UserScript==
+
+// ╔══╗─────────────╔╗───  ╔══╗───────╔═╗╔╗───  ╔═╗──────────────╔╗─
+// ╚║║╝╔══╗╔═╗╔═╗╔╦╗╠╣╔═╗  ║╔╗║╔╦╗╔═╗─║═╣╠╣╔╗─  ║╬║╔╗─╔═╗─╔═╦╗╔═╗║╚╗
+// ╔║║╗║║║║║╬║║╩╣║╔╝║║║╬║  ║╔╗║║╔╝║╬╚╗╠═║║║║╚╗  ║╔╝║╚╗║╬╚╗║║║║║╩╣║╔╣
+// ╚══╝╚╩╩╝║╔╝╚═╝╚╝─╚╝╚═╝  ╚══╝╚╝─╚══╝╚═╝╚╝╚═╝  ╚╝─╚═╝╚══╝╚╩═╝╚═╝╚═╝
+// ────────╚╝────────────  ───────────────────  ────────────────────
 
 Number.prototype.between = function(a, b) {
   var min = Math.min.apply(Math, [a, b]),
@@ -18,14 +22,14 @@ Number.prototype.between = function(a, b) {
   return this > min && this < max;
 };
 var range = 25;
-window.baseTepmlateUrl = 'https://raw.githubusercontent.com/zAsuma/ImperioMap/blob/master/';
+window.baseTepmlateUrl = 'https://raw.githubusercontent.com/zAsuma/ancapzone/master/';
 
 window.addEventListener('load', function () {
     //Regular Expression to get coordinates out of URL
     re = /(.*)\/\?p=(\-?(?:\d*)),(\-?(?:\d*))/g;
     //Regular Expression to get coordinates from cursor
     rec = /x\:(\d*) y\:(\d*)/g;
-    gameWindow = document.getElementById("canvas");
+    gameWindow = document.getElementById("gameWindow");
     //DOM element of the displayed X, Y variables
     coorDOM = null;
     findCoor();
@@ -37,7 +41,7 @@ window.addEventListener('load', function () {
     y = 0;
     //list of all available templates
     template_list = null;
-    zoomlevel = 6;
+    zoomlevel = 9;
     //toggle options
     toggle_show = true;
     toggle_follow = true; //if minimap is following window, x_window = x and y_window = y;
@@ -52,22 +56,21 @@ window.addEventListener('load', function () {
     //Cachebreaker to force refresh
     cachebreaker = null;
 
-	vers = "𝕴𝖒𝖕𝖊𝖗𝖎𝖔 𝕭𝖗𝖆𝖘𝖎𝖑 𝕸𝖆𝖕";
-
     var div = document.createElement('div');
     div.setAttribute('class', 'post block bc2');
-    div.innerHTML = '<div id="minimapbg" style="relative: absolute; right: 0em; top: 0em;">' +
-        '<div class="posy" id="posyt" style="background-size: 100%; background-image: url(https://i.imgur.com/2qu5Wch.png); color: rgb(255, 255, 255); text-align: center; line-height: 42px; vertical-align: middle; width: auto; height: auto; border-radius: 1px; padding: 1px;">' + vers +
+    div.innerHTML = '<div id="minimapbg" style="position: absolute; right: 3em; top: 1em;">' +
+        '<div class="posy" id="posyt" style="background-color: rgba(0, 0, 0, 0.75); color: rgb(255, 190, 0); text-align: center; line-height: 30px; vertical-align: middle; width: auto; height: auto; border-radius: 0px; padding: 5px;">' +
         '<div id="minimap-text" style="display: none;"></div>' +
-        '<div id="minimap-box" style="position: relative;width:380px;height:200px">' +
+        '<div id="minimap-box" style="position: relative;width:350px;height:200px">' +
         '<canvas id="minimap" style="width: 100%; height: 100%;z-index:1;position:absolute;top:0;left:0;"></canvas>' +
         '<canvas id="minimap-board" style="width: 100%; height: 100%;z-index:2;position:absolute;top:0;left:0;"></canvas>' +
         '<canvas id="minimap-cursor" style="width: 100%; height: 100%;z-index:3;position:absolute;top:0;left:0;"></canvas>' +
         '</div><div id="minimap-config" style="line-height:20px;">' +
-        		'<a href=https://discord.io/imperiobrasil target="_blank">Discord' +
-        '</a> | <span id="hide-map" style="cursor:pointer;font-weight:bold;color: rgb(255, 255, 0);"> Esconder' +
-        '</span> | Zoom: <span id="zoom-plus" style="cursor:pointer;font-weight:bold;color: rgb(0, 255, 0);">+</span>  /  ' +
-        '<span id="zoom-minus" style="cursor:pointer;font-weight:bold;color: rgb(0, 255, 0);">-</span>' +
+        '<span id="hide-map" style="cursor:pointer;font-size:18px;">    Esconder' +
+        '</span> | Zoom: <span id="zoom-plus" style="cursor:pointer;font-weight:bold;">+</span>  /  ' +
+        '<span id="zoom-minus" style="cursor:pointer;font-weight:bold;">-</span>' +
+        '</div><div id="minimap-tittle" style="line-height:10px;">' +
+        '<span id="minimap-kekistan" style="font-weight:bold;text-align:center;"> AncapZone' +
         '</div>' +
         '</div>';
     document.body.appendChild(div);
@@ -98,6 +101,7 @@ window.addEventListener('load', function () {
         toggle_show = false;
         document.getElementById("minimap-box").style.display = "none";
         document.getElementById("minimap-config").style.display = "none";
+        document.getElementById("minimap-kekistan").style.display = "none";
         document.getElementById("minimap-text").style.display = "block";
         document.getElementById("minimap-text").innerHTML = "Mostrar";
         document.getElementById("minimap-text").style.cursor = "pointer";
@@ -106,8 +110,9 @@ window.addEventListener('load', function () {
         toggle_show = true;
         document.getElementById("minimap-box").style.display = "block";
         document.getElementById("minimap-config").style.display = "block";
+        document.getElementById("minimap-kekistan").style.display = "block";
         document.getElementById("minimap-text").style.display = "none";
-        document.getElementById("minimap-text").style.color = "default";
+        document.getElementById("minimap-text").style.cursor = "default";
         loadTemplates();
     };
     document.getElementById("zoom-plus").addEventListener('mousedown', function (e) {
@@ -127,7 +132,7 @@ window.addEventListener('load', function () {
     }, false);
     document.getElementById("zoom-minus").addEventListener('mouseup', function (e) {
         zooming_out = false;
-    }, false);
+    }, false); 
     gameWindow = document.getElementById("canvas");
     gameWindow.addEventListener('mouseup', function (evt) {
         if (!toggle_show)
@@ -139,8 +144,8 @@ window.addEventListener('load', function () {
     gameWindow.addEventListener('mousemove', function (evt) {
         if (!toggle_show)
             return;
-        coorDOM = document.getElementById("coords");
-        coordsXY = coorDOM.innerHTML.split(/(\d+)/)
+        coorDOM = document.getElementsByClassName("coords")[0];
+        coordsXY = coorDOM.innerHTML.split(/(-?\d+)/)
         //console.log(coordsXY);
         x_new = (coordsXY[0].substring(2) + coordsXY[1])*1
         y_new = (coordsXY[2].substring(3) + coordsXY[3])*1;
@@ -191,6 +196,7 @@ function toggleShow() {
         document.getElementById("minimap-box").style.display = "block";
         document.getElementById("minimap-config").style.display = "block";
         document.getElementById("minimap-text").style.display = "none";
+        document.getElementById("hide-map").style.display = "none";
         document.getElementById("minimapbg").onclick = function () {
         };
         loadTemplates();
@@ -198,7 +204,7 @@ function toggleShow() {
         document.getElementById("minimap-box").style.display = "none";
         document.getElementById("minimap-config").style.display = "none";
         document.getElementById("minimap-text").style.display = "block";
-        document.getElementById("minimap-text").innerHTML = "Mostrar Minimap";
+        document.getElementById("minimap-text").innerHTML = "Show";
         document.getElementById("minimapbg").onclick = function () {
             toggleShow()
         };
@@ -261,22 +267,24 @@ function loadTemplates() {
         var temp_yb = parseInt(template_list[template]["y"]) + parseInt(template_list[template]["height"]);
         // if (temp_xr <= x_left || temp_yb <= y_top || temp_x >= x_right || temp_y >= y_bottom)
         //    continue
+        console.log(x_window, y_window);
         if (!x_window.between(temp_x-range*1, temp_xr+range*1))
             continue
         if (!y_window.between(temp_y-range*1, temp_yb+range*1))
             continue
-        console.log("Template " + template + " is in range!");
-        // console.log(x_window, y_window);
+        
         needed_templates.push(template);
     }
     if (needed_templates.length == 0) {
         if (zooming_in == false && zooming_out == false) {
             document.getElementById("minimap-box").style.display = "none";
             document.getElementById("minimap-text").style.display = "block";
-            document.getElementById("minimap-text").innerHTML = "Não tem nada aqui.";
+            document.getElementById("minimap-config").style.display = "none";
+            document.getElementById("minimap-text").innerHTML = "Nenhum template aqui.";
         }
     } else {
         document.getElementById("minimap-box").style.display = "block";
+        document.getElementById("minimap-config").style.display = "block";
         document.getElementById("minimap-text").style.display = "none";
         counter = 0;
         for (i = 0; i < needed_templates.length; i++) {
@@ -320,7 +328,7 @@ function drawTemplates() {
         var newheight = zoomlevel * image_list[template].height;
         var img = image_list[template];
         ctx_minimap.drawImage(img, xoff, yoff, newwidth, newheight);
-        console.log("Drawn!");
+
     }
 }
 
@@ -329,6 +337,7 @@ function drawBoard() {
     if (zoomlevel <= 4.6)
         return;
     ctx_minimap_board.beginPath();
+    ctx_minimap_board.linewith = "0.5";
     var bw = minimap_board.width + zoomlevel;
     var bh = minimap_board.height + zoomlevel;
     var xoff_m = (minimap.width / 2) % zoomlevel - zoomlevel;
@@ -344,7 +353,7 @@ function drawBoard() {
         ctx_minimap_board.moveTo(xoff_m, x + yoff_m);
         ctx_minimap_board.lineTo(bw + xoff_m, x + yoff_m);
     }
-    ctx_minimap_board.strokeStyle = "black";
+    ctx_minimap_board.strokeStyle = "grey";
     ctx_minimap_board.stroke();
 }
 
@@ -360,8 +369,8 @@ function drawCursor() {
     yoff_c = y - y_top;
 
     ctx_minimap_cursor.beginPath();
-    ctx_minimap_cursor.lineWidth = zoomlevel / 3;
-    ctx_minimap_cursor.strokeStyle = "red";
+    ctx_minimap_cursor.lineWidth = zoomlevel / 5;
+    ctx_minimap_cursor.strokeStyle = "gold";
     ctx_minimap_cursor.rect(zoomlevel * xoff_c, zoomlevel * yoff_c, zoomlevel, zoomlevel);
     ctx_minimap_cursor.stroke();
 
@@ -390,5 +399,6 @@ function findCoor() {
             console.log(coorDOM.innerHTML);
         }
     });*/
-    coorDOM = document.getElementById("coords");
+    coorDOM = document.getElementsByClassName("coorbox")[0];
 }
+
