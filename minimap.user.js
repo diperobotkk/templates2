@@ -26,7 +26,7 @@ window.addEventListener('load', function () {
     re = /(.*)\/\?p=(\-?(?:\d*)),(\-?(?:\d*))/g;
     //Regular Expression to get coordinates from cursor
     rec = /x\:(\d*) y\:(\d*)/g;
-    gameWindow = document.getElementById("gameWindow");
+    gameWindow = document.getElementById("canvas");
     //DOM element of the displayed X, Y variables
     coorDOM = null;
     findCoor();
