@@ -1,10 +1,10 @@
 {
-  "Espada": {
-    "name": "Espada.png",
-    "x": 1125,
-    "y": 3935,
-    "width": 268,
-    "height": 87
+  "Worldmap": {
+    "name": "wm.png",
+    "x": -273,
+    "y": 1728,
+    "width": 1363,
+    "height": 635
    },
   "ODNLogo": {
     "name": "ODNLogo.png",
