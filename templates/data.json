@@ -1,16 +1,23 @@
 {
- "AgentinaBandera_Principal": {
-  "name": "AgentinaBandera_Principal.png",
-  "x": -19,
-  "y": 481,
-  "width": 318,
-  "height": 178
-  },
-  "WorldMap": {
-    "name": "wm.png",
-    "x": -273,
-    "y":  1728,
-    "width": 1363,
-    "height": 635
+  "Espada": {
+    "name": "Espada.png",
+    "x": 1125,
+    "y": 3935,
+    "width": 268,
+    "height": 87
+   },
+  "ODNLogo": {
+    "name": "ODNLogo.png",
+    "x": 1978,
+    "y": 3912,
+    "width": 117,
+    "height": 113
+   },
+  "cat": {
+   "name": "gatobr.png",
+   "x": 3022,
+   "y": 2922,
+   "width": 178,
+   "height": 88
  }
 }
