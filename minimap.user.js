@@ -396,6 +396,6 @@ function findCoor() {
             console.log(coorDOM.innerHTML);
         }
     });*/
-    coorDOM = document.getElementsByClassName("coorbox")[0];
+    coorDOM = document.getElementsByClassName("coords")[0];
 }
 
