@@ -5,7 +5,6 @@
 // @description  -
 // @author       meatie
 // @match        https://pixelzone.io/*
-// @homepage     https://github.com/meatie-se/pixel-minimap
 // @grant        none
 // ==/UserScript==
 /*Based on https://github.com/Pinkfloydd/ArgentinaMap_PixelZone
