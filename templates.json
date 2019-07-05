@@ -12,6 +12,12 @@
   "width": 808, "height": 667
 }
 
+,"pt": {
+  "name": "portugal.png",
+  "x": -2857,  "y": 1568,
+  "width": 600, "height": 400
+}
+
 ,"turkey_void": {
   "name": "TrZoneMerkez.png",
   "x": 812,  "y": -505,
