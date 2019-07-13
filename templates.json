@@ -1,9 +1,9 @@
 { "comment": "",
 
-"tr_bigflag": {
-  "name": "bigflag.png",
-  "x": -4096,  "y": 3295,
-  "width": 1307, "height": 802
+"areabr": {
+  "name": "template.png",
+  "x": 1463,  "y": 2591,
+  "width": 2633, "height": 1505
 }
 
 ,"center": {
