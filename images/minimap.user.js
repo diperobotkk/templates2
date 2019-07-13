@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         | Império Bot 👑 |
+// @name         Império Bot 👑
 // @namespace    http://tampermonkey.net/
 // @version      1.0.0
 // @description  Testado no chrome
