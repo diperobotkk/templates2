@@ -11,10 +11,10 @@
   "x": 1463,  "y": 2220,
   "width": 400, "height": 400
 }
- ,"fenerzone": {
-  "name": "tam.png",
-  "x": 1481,  "y": -613,
-  "width": 500, "height": 355
+ ,"senna": {
+  "name": "senna.png",
+  "x": 327,  "y": 440,
+  "width": 202, "height": 202
 }
 
 ,"pt": {
