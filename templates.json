@@ -23,10 +23,10 @@
   "width": 600, "height": 400
 }
 
-,"turkey_void": {
-  "name": "TrZoneMerkez.png",
-  "x": 812,  "y": -505,
-  "width": 377, "height": 279
+,"attackmain": {
+  "name": "azmain.png",
+  "x": 318,  "y": 3035,
+  "width": 476, "height": 337
 }
  
  ,"hilalyildiz": {
