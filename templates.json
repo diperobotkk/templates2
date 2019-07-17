@@ -18,6 +18,12 @@
   "width": 263, "height": 271
 }
 
+,"edu": {
+  "name": "edu.png",
+  "x": 3379,  "y": 2927,
+  "width": 83, "height": 83
+}
+
 ,"gato": {
   "name": "gatobr.png",
   "x": 3022,  "y": 2922,
