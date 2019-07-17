@@ -26,6 +26,11 @@
   "x": 1683,  "y": 3084,
   "width": 466, "height": 578
 }
+ ,"huedentor": {
+  "name": "huedentor.png",
+  "x": 3407,  "y": 2710,
+  "width": 379, "height": 395
+}
 ,"portugal": {
   "name": "portugal.png",
   "x": -2857,  "y": 1568,
