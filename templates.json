@@ -1,9 +1,9 @@
 { "comment": "",
 
-"areabr": {
-  "name": "bra.png",
-  "x": 1463,  "y": 2591,
-  "width": 2633, "height": 1505
+"Bandeira": {
+  "name": "bandeira.png",
+  "x": 2153,  "y": 3105,
+  "width": 1943, "height": 991
 }
 
 ,"guerreira": {
@@ -43,8 +43,8 @@
 
   ,"discord": {
   "name": "discord.png",
-  "x": -4096,  "y": 3220,
-  "width": 522, "height": 75
+  "x": 2702,  "y": 3010,
+  "width": 846, "height": 95
 }
 
 
