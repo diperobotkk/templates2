@@ -21,6 +21,11 @@
   "x": 2171,  "y": 2687,
   "width": 582, "height": 418
 }
+ ,"artes2": {
+  "name": "artes.png",
+  "x": 1683,  "y": 3084,
+  "width": 466, "height": 578
+}
 ,"portugal": {
   "name": "portugal.png",
   "x": -2857,  "y": 1568,
