@@ -12,6 +12,24 @@
   "width": 400, "height": 400
 }
 
+,"gato": {
+  "name": "gatobr.png",
+  "x": 3022,  "y": 2922,
+  "width": 178, "height": 88
+}
+
+,"dogao": {
+  "name": "gatobr.png",
+  "x": 2932,  "y": 2940,
+  "width": 90, "height": 70
+}
+
+,"brasao": {
+  "name": "brasao.png",
+  "x": 3702,  "y": 2935,
+  "width": 186, "height": 166
+}
+
  ,"senna": {
   "name": "senna.png",
   "x": 327,  "y": 440,
