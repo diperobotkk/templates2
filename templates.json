@@ -16,7 +16,11 @@
   "x": 327,  "y": 440,
   "width": 202, "height": 202
 }
-
+ ,"artes": {
+  "name": "trio.png",
+  "x": 2171,  "y": 2687,
+  "width": 582, "height": 418
+}
 ,"portugal": {
   "name": "portugal.png",
   "x": -2857,  "y": 1568,
