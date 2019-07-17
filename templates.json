@@ -18,6 +18,12 @@
   "width": 202, "height": 202
 }
 
+ ,"imperial": {
+  "name": "imperial.png",
+  "x": 1463,  "y": 2591,
+  "width": 708, "height": 423
+}
+
  ,"artes": {
   "name": "trio.png",
   "x": 2171,  "y": 2687,
