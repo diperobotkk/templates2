@@ -24,6 +24,12 @@
   "width": 323, "height": 239
 }
 
+,"ferrari": {
+  "name": "carro.png",
+  "x": 2683,  "y": 1934,
+  "width": 370, "height": 416
+}
+
 ,"poraet": {
   "name": "pato.png",
   "x": 1323,  "y": 777,
