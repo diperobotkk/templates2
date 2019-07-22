@@ -24,6 +24,12 @@
   "width": 323, "height": 239
 }
 
+,"ngc": {
+  "name": "emblema.png",
+  "x": 224,  "y": 774,
+  "width": 195, "height": 262
+}
+
 ,"ferrari": {
   "name": "carro.png",
   "x": 2683,  "y": 1934,
