@@ -36,12 +36,6 @@
   "width": 195, "height": 262
 }
 
-,"ferrari": {
-  "name": "carro.png",
-  "x": 2683,  "y": 1934,
-  "width": 370, "height": 416
-}
-
 ,"poraet": {
   "name": "pato.png",
   "x": 1323,  "y": 777,
@@ -54,40 +48,10 @@
   "width": 300, "height": 300
 }
 
-,"ajudacrl": {
-  "name": "ajuda.png",
-  "x": 3281,  "y": 2759,
-  "width": 126, "height": 251
-}
-
 ,"ancapguei": {
   "name": "rg.png",
   "x": 1831,  "y": 2400,
   "width": 263, "height": 271
-}
-
-,"edu": {
-  "name": "edu.png",
-  "x": 3379,  "y": 2927,
-  "width": 83, "height": 83
-}
-
-,"gato": {
-  "name": "gatobr.png",
-  "x": 3022,  "y": 2922,
-  "width": 178, "height": 88
-}
-
-,"dogao": {
-  "name": "dogao.png",
-  "x": 2932,  "y": 2940,
-  "width": 90, "height": 70
-}
-
-,"brasao": {
-  "name": "brasao.png",
-  "x": 3702,  "y": 2935,
-  "width": 186, "height": 166
 }
 
  ,"senna": {
@@ -102,22 +66,10 @@
   "width": 708, "height": 423
 }
 
- ,"artes": {
-  "name": "trio.png",
-  "x": 2171,  "y": 2687,
-  "width": 582, "height": 418
-}
-
  ,"artes2": {
   "name": "artes.png",
   "x": 1683,  "y": 3084,
   "width": 466, "height": 578
-}
-
- ,"huedentor": {
-  "name": "huedentor.png",
-  "x": 3407,  "y": 2710,
-  "width": 379, "height": 395
 }
 
 ,"portugal": {
@@ -130,24 +82,6 @@
   "name": "azmain.png",
   "x": 318,  "y": 3035,
   "width": 476, "height": 337
-}
- 
- ,"zezoca": {
-  "name": "zezoca.png",
-  "x": 2778,  "y": 2733,
-  "width": 136, "height": 231
-}
- 
-  ,"futebol": {
-  "name": "futbr.png",
-  "x": 3883,  "y": 2885,
-  "width": 208, "height": 216
-}
-
-  ,"discord": {
-  "name": "discord.png",
-  "x": 2702,  "y": 3010,
-  "width": 846, "height": 95
 }
 
 
