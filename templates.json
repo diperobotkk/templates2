@@ -90,14 +90,8 @@
   "width": 600, "height": 400
 }
 
-,"attackmain": {
-  "name": "azmain.png",
-  "x": 318,  "y": 3035,
-  "width": 476, "height": 337
-}
-
-,"bpararest": {
-  "name": "parato.png",
+,"bordabaere": {
+  "name": "borda.png",
   "x": -422,  "y": 2339,
   "width": 148, "height": 1757
 }
