@@ -12,6 +12,12 @@
   "width": 400, "height": 400
 }
 
+,"italiano": {
+  "name": "italia.png",
+  "x": -1851,  "y": -233,
+  "width": 1250, "height": 744
+}
+
 ,"cima": {
   "name": "brcima.png",
   "x": 2171,  "y": 2687,
