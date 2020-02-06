@@ -79,14 +79,12 @@
 }
 
 ,"italias": {
-  "name": "italias.png",
-  "x": -1851,  "y": -233,
-  "width": 1250, "height": 744
-}
-
-,"italias": {
   "name": "nego_italia",
   "x": -1851,  "y": -233,
   "width": 1250, "height": 744
   
+}
+ 
+ 
+ 
 }
