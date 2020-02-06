@@ -84,7 +84,11 @@
   "width": 288, "height": 374
 }
 
-
+,"italias": {
+  "name": "italias.png",
+  "x": -1851,  "y": -233,
+  "width": 1250, "height": 744
+}
 
 
 }
